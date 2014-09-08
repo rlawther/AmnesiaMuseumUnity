@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .00200000009
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientLight: {r: .264705896, g: .264705896, b: .264705896, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: a58dbb749704d944f910ac2e4d24e83b, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -183,6 +183,92 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!1 &6439311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 6439312}
+  - 82: {fileID: 6439313}
+  m_Layer: 0
+  m_Name: sound amnesia water park side 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6439312
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6439311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -87.5140991, y: -13.3715553, z: -9.33407593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 4
+--- !u!82 &6439313
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6439311}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 57bb8fc75fbab4b4283eba6880976f70, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 37.9858398
+  MaxDistance: 55.5535278
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .530675411
+      value: 1
+      inSlope: -.0686715543
+      outSlope: -.0686715543
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: .0568884648
+      outSlope: .0568884648
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &18974323
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,8 +622,8 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .810000002
-  m_Range: 22.2199993
+  m_Intensity: 2
+  m_Range: 50.5
   m_SpotAngle: 71
   m_CookieSize: 10
   m_Shadows:
@@ -568,11 +654,175 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90221816}
   m_LocalRotation: {x: -3.5527141e-15, y: .713715196, z: 8.50814743e-08, w: -.700436115}
-  m_LocalPosition: {x: 64.0306625, y: -.619353533, z: 81.6933365}
+  m_LocalPosition: {x: 81.5789795, y: -.619354248, z: 82.5210571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 862351109}
   m_RootOrder: 2
+--- !u!1 &112969146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 112969147}
+  - 114: {fileID: 112969149}
+  - 135: {fileID: 112969148}
+  m_Layer: 0
+  m_Name: random museum light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112969147
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112969146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 949.864502, y: -69.9998474, z: 178.555298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 10
+--- !u!135 &112969148
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112969146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 58.0499992
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &112969149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112969146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
+--- !u!1 &189308455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 189308456}
+  - 114: {fileID: 189308458}
+  - 135: {fileID: 189308457}
+  m_Layer: 0
+  m_Name: random path light 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &189308456
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189308455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1097.63159, y: -69.9998474, z: 177.13446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 9
+--- !u!135 &189308457
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189308455}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 47.0999985
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &189308458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189308455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &193920031
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +1012,92 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+--- !u!1 &252201684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 252201685}
+  - 82: {fileID: 252201686}
+  m_Layer: 0
+  m_Name: sound amnesia  water park  side 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &252201685
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252201684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 121.648376, y: 0, z: 409.770752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 6
+--- !u!82 &252201686
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252201684}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 57bb8fc75fbab4b4283eba6880976f70, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 77.1627502
+  MaxDistance: 119.935181
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .530675411
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .984084904
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &278357800
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +1186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 285441267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -939,7 +1275,7 @@ MonoBehaviour:
   baseScripts: {fileID: 1608910739}
   AVIEPrefab: {fileID: 2054299354}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 1
+  useAVIECamera: 0
 --- !u!114 &291379398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,51 +1289,121 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyBillboard: 1
   billboardRadius:
-  - 10
-  - 10
-  - 10
   - 100
   - 100
   - 100
   - 100
-  applyFade: 0
+  - 100
+  - 100
+  - 100
+  applyFade: 1
   fadeCurve: []
   fadeCurveG1E1:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG1E2:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG1E3:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E1:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E2:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E3:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E4:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .0280035529
+      outSlope: .0280035529
+      tangentMode: 0
+    - time: .297935188
+      value: .602831483
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-  fadeDistanceMultiplier: 100
+  fadeDistanceMultiplier: 10
 --- !u!114 &291379402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &327726662
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,6 +1537,16 @@ Transform:
   - {fileID: 1131880136}
   - {fileID: 596426410}
   - {fileID: 2133811015}
+  - {fileID: 1422572531}
+  - {fileID: 770457284}
+  - {fileID: 1645880576}
+  - {fileID: 189308456}
+  - {fileID: 112969147}
+  - {fileID: 1342982765}
+  - {fileID: 1597692273}
+  - {fileID: 1257103363}
+  - {fileID: 528566390}
+  - {fileID: 2130209953}
   m_Father: {fileID: 1618348267}
   m_RootOrder: 10
 --- !u!1001 &356131668
@@ -1246,6 +1662,40 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!1 &377387186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 377387187}
+  m_Layer: 0
+  m_Name: sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377387187
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377387186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 896.462708, y: -63.4096336, z: 151.935791}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2067690730}
+  - {fileID: 803956018}
+  - {fileID: 1033316219}
+  - {fileID: 655460977}
+  - {fileID: 6439312}
+  - {fileID: 982806391}
+  - {fileID: 252201685}
+  m_Father: {fileID: 1618348267}
+  m_RootOrder: 11
 --- !u!1 &378943865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1721,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 378943865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -1543,6 +1993,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1816779221}
   m_RootOrder: 1
+--- !u!1 &528566389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 528566390}
+  - 114: {fileID: 528566392}
+  - 135: {fileID: 528566391}
+  m_Layer: 0
+  m_Name: random beach light 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528566390
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528566389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000.36279, y: -69.9998474, z: 520.209351}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 14
+--- !u!135 &528566391
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528566389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 37
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &528566392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528566389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &534502627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,9 +2101,9 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .810000002
-  m_Range: 22.2199993
-  m_SpotAngle: 71
+  m_Intensity: 2
+  m_Range: 55.0099983
+  m_SpotAngle: 70.7786102
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -1601,7 +2133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534502627}
   m_LocalRotation: {x: 3.55271368e-15, y: .693523467, z: 8.26744326e-08, w: .720434129}
-  m_LocalPosition: {x: 32.008564, y: -.320158482, z: 83.4357681}
+  m_LocalPosition: {x: 10.8076172, y: -.320159912, z: 82.9122925}
   m_LocalScale: {x: 1.00002241, y: 1, z: 1.00002265}
   m_Children: []
   m_Father: {fileID: 862351109}
@@ -1810,7 +2342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640201017
 Transform:
   m_ObjectHideFlags: 0
@@ -1821,7 +2353,6 @@ Transform:
   m_LocalPosition: {x: 968.955322, y: -64.5053406, z: 193.433807}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2087895467}
   - {fileID: 1843481253}
   - {fileID: 1648335140}
   - {fileID: 989134334}
@@ -1898,6 +2429,92 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 645808926}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &655460976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 655460977}
+  - 82: {fileID: 655460978}
+  m_Layer: 0
+  m_Name: sound amnesia traffic park side 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &655460977
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655460976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 145.973083, y: -8.11310196, z: -26.9180298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 3
+--- !u!82 &655460978
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655460976}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: d94ccee9255c94e49b9929776155b163, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 15.1000004
+  MaxDistance: 52.493988
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .287651986
+      value: 1
+      inSlope: .0900155604
+      outSlope: .0900155604
+      tangentMode: 0
+    - time: .98673743
+      value: 0
+      inSlope: -.0545664579
+      outSlope: -.0545664579
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &686181062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,8 +2553,8 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .389999986
-  m_Range: 58.2000008
+  m_Intensity: 1.03999996
+  m_Range: 63.2000008
   m_SpotAngle: 102
   m_CookieSize: 10
   m_Shadows:
@@ -1989,7 +2606,7 @@ Transform:
   m_LocalScale: {x: .875436962, y: .979596734, z: .991996467}
   m_Children: []
   m_Father: {fileID: 640201017}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!108 &710739703
 Light:
   m_ObjectHideFlags: 0
@@ -2137,7 +2754,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756495611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 10, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -2180,6 +2797,88 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756495611}
   m_Mesh: {fileID: 4300000, guid: 5a0d1dedb0f05684587c7e2ccdb1a076, type: 2}
+--- !u!1 &770457283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 770457284}
+  - 114: {fileID: 770457286}
+  - 135: {fileID: 770457285}
+  m_Layer: 0
+  m_Name: random beach light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770457284
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770457283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 823.40979, y: -69.9998474, z: 162.926086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 7
+--- !u!135 &770457285
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770457283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 43.7999992
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &770457286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 770457283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &777287020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2948,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803741280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -2292,6 +2991,92 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803741280}
   m_Mesh: {fileID: 4300000, guid: 5a0d1dedb0f05684587c7e2ccdb1a076, type: 2}
+--- !u!1 &803956017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 803956018}
+  - 82: {fileID: 803956019}
+  m_Layer: 0
+  m_Name: sound amnesia traffic park side 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &803956018
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803956017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41.9066772, y: -8.11310196, z: 39.5879517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 1
+--- !u!82 &803956019
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803956017}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: d94ccee9255c94e49b9929776155b163, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 15.1000004
+  MaxDistance: 26.3913269
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .302000016
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &809646242
 Prefab:
   m_ObjectHideFlags: 0
@@ -2517,7 +3302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &862351109
 Transform:
   m_ObjectHideFlags: 0
@@ -2653,6 +3438,92 @@ Prefab:
   m_RootGameObject: {fileID: 1531336305}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &982806390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 982806391}
+  - 82: {fileID: 982806392}
+  m_Layer: 0
+  m_Name: sound amnesia  water park  side 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982806391
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 982806390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300.939636, y: 0, z: 72.3252716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 5
+--- !u!82 &982806392
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 982806390}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 57bb8fc75fbab4b4283eba6880976f70, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 18.5928955
+  MaxDistance: 35.0362854
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .530675411
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .984084904
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &986270058
 Prefab:
   m_ObjectHideFlags: 0
@@ -2744,7 +3615,7 @@ Transform:
   m_LocalScale: {x: .875436962, y: .979596734, z: .991996467}
   m_Children: []
   m_Father: {fileID: 640201017}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!108 &989134335
 Light:
   m_ObjectHideFlags: 0
@@ -2805,7 +3676,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003242766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -2932,6 +3803,92 @@ Prefab:
   m_RootGameObject: {fileID: 777287020}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1033316218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1033316219}
+  - 82: {fileID: 1033316220}
+  m_Layer: 0
+  m_Name: sound amnesia traffic park side 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1033316219
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033316218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.2542114, y: -8.11310196, z: 223.825439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 377387187}
+  m_RootOrder: 2
+--- !u!82 &1033316220
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033316218}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: d94ccee9255c94e49b9929776155b163, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 20.7211304
+  MaxDistance: 50
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .302000016
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .997347474
+      value: 0
+      inSlope: .0853326991
+      outSlope: .0853326991
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1035465553
 Prefab:
   m_ObjectHideFlags: 0
@@ -3456,8 +4413,8 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .810000002
-  m_Range: 22.2199993
+  m_Intensity: 2
+  m_Range: 57.2000008
   m_SpotAngle: 71
   m_CookieSize: 10
   m_Shadows:
@@ -3488,7 +4445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147219040}
   m_LocalRotation: {x: 0, y: .99996376, z: 1.19204962e-07, w: .00852316618}
-  m_LocalPosition: {x: 48.7846794, y: -3.35176063, z: 96.4081726}
+  m_LocalPosition: {x: 48.4535522, y: -3.35176849, z: 113.625458}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 862351109}
@@ -3636,6 +4593,170 @@ MeshFilter:
   m_PrefabInternal: {fileID: 434419151}
   m_GameObject: {fileID: 1187581421}
   m_Mesh: {fileID: 4300000, guid: 98545e3f1f726b64d8c7b340fbcf7352, type: 3}
+--- !u!1 &1257103362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1257103363}
+  - 114: {fileID: 1257103365}
+  - 135: {fileID: 1257103364}
+  m_Layer: 0
+  m_Name: random park light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257103363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257103362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 934.139038, y: -69.9998474, z: 443.868164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 13
+--- !u!135 &1257103364
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257103362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 37
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1257103365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1257103362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
+--- !u!1 &1342982764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1342982765}
+  - 114: {fileID: 1342982767}
+  - 135: {fileID: 1342982766}
+  m_Layer: 0
+  m_Name: random road light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1342982765
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342982764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 962.652039, y: -69.9998474, z: 367.526947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 11
+--- !u!135 &1342982766
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342982764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 48.7999992
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1342982767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342982764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &1343339431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,7 +4851,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383771421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -3773,6 +4894,88 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383771421}
   m_Mesh: {fileID: 4300000, guid: 5a0d1dedb0f05684587c7e2ccdb1a076, type: 2}
+--- !u!1 &1422572530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1422572531}
+  - 114: {fileID: 1422572532}
+  - 135: {fileID: 1422572533}
+  m_Layer: 0
+  m_Name: random tower light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1422572531
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422572530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1017.46368, y: -69.9998474, z: 275.924164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 6
+--- !u!114 &1422572532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422572530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
+--- !u!135 &1422572533
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422572530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 34.7299995
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1431515786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4169,6 +5372,88 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1485960216}
   m_GameObject: {fileID: 1584153468}
   m_Mesh: {fileID: 4300000, guid: c668520de1ef8417fbb8a43ae087a450, type: 3}
+--- !u!1 &1597692272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1597692273}
+  - 114: {fileID: 1597692275}
+  - 135: {fileID: 1597692274}
+  m_Layer: 0
+  m_Name: random road light 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597692273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597692272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1072.10498, y: -69.9998474, z: 298.543976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 12
+--- !u!135 &1597692274
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597692272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 37
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1597692275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597692272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &1608910739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,6 +5620,7 @@ Transform:
   - {fileID: 291379395}
   - {fileID: 1438021461}
   - {fileID: 327726662}
+  - {fileID: 377387187}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1618348268
@@ -4431,6 +5717,88 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620539825}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1645880575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1645880576}
+  - 114: {fileID: 1645880578}
+  - 135: {fileID: 1645880577}
+  m_Layer: 0
+  m_Name: random path light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645880576
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645880575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1009.53967, y: -69.9998474, z: 46.4172325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 8
+--- !u!135 &1645880577
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645880575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 53.4000015
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1645880578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645880575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &1648335139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,7 +5826,7 @@ Transform:
   m_LocalScale: {x: .875436962, y: .979596734, z: .991996467}
   m_Children: []
   m_Father: {fileID: 640201017}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!108 &1648335141
 Light:
   m_ObjectHideFlags: 0
@@ -4653,7 +6021,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722547601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3373, y: 0, z: -93.1181335}
+  m_LocalPosition: {x: 3373, y: 1.60000002, z: -93.1181335}
   m_LocalScale: {x: 6.6500001, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1618348267}
@@ -4874,7 +6242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1816779221
 Transform:
   m_ObjectHideFlags: 0
@@ -4963,7 +6331,7 @@ Transform:
   m_LocalScale: {x: .875436962, y: .979596734, z: .991996467}
   m_Children: []
   m_Father: {fileID: 640201017}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!108 &1843481254
 Light:
   m_ObjectHideFlags: 0
@@ -5482,100 +6850,87 @@ MonoBehaviour:
   _followCamera: {fileID: 0}
   _displayConfiguration: 1
   isInitialized: 0
---- !u!1 &2087895466
+--- !u!1 &2067690729
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 2087895467}
-  - 108: {fileID: 2087895468}
-  - 114: {fileID: 2087895469}
-  - 114: {fileID: 2087895470}
+  - 4: {fileID: 2067690730}
+  - 82: {fileID: 2067690731}
   m_Layer: 0
-  m_Name: 'Point light tower '
+  m_Name: sound amnesia  wind base atmos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2087895467
+--- !u!4 &2067690730
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087895466}
-  m_LocalRotation: {x: 0, y: 8.94069672e-08, z: 0, w: 1}
-  m_LocalPosition: {x: 36.9055367, y: 8.57518864, z: 92.5078812}
-  m_LocalScale: {x: .875436962, y: .979596734, z: .991996467}
+  m_GameObject: {fileID: 2067690729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 81.4407349, y: -16.2652245, z: 61.9168549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 640201017}
+  m_Father: {fileID: 377387187}
   m_RootOrder: 0
---- !u!108 &2087895468
-Light:
+--- !u!82 &2067690731
+AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087895466}
+  m_GameObject: {fileID: 2067690729}
   m_Enabled: 1
   serializedVersion: 3
-  m_Type: 2
-  m_Color: {r: .485294104, g: .485294104, b: .485294104, a: 1}
-  m_Intensity: .5
-  m_Range: 87.6100006
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
+  m_audioClip: {fileID: 8300000, guid: 33a74f75fc9124ecfbb4cf6492034301, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .354000002
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 30
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!114 &2087895469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087895466}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317c75bde357a42ea81a266adfa34552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorChannel: 0
-  waveFunction: 0
-  offset: 0
-  amplitude: 1
-  phase: 0
-  frequency: .5
-  affectsIntensity: 1
---- !u!114 &2087895470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2087895466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947957a3c9e18472f900ecbb62284ed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    m_Curve:
+    - time: .0333333351
+      value: 1
+      inSlope: -30.0120068
+      outSlope: -30.0120068
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2094891775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5660,8 +7015,8 @@ Light:
   serializedVersion: 3
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .810000002
-  m_Range: 22.2199993
+  m_Intensity: 2
+  m_Range: 45.5
   m_SpotAngle: 71
   m_CookieSize: 10
   m_Shadows:
@@ -5692,11 +7047,93 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097275857}
   m_LocalRotation: {x: 1.28369537e-15, y: -.0018466115, z: -2.20135854e-10, w: -.999998331}
-  m_LocalPosition: {x: 48.6693268, y: -3.35176063, z: 70.6630325}
+  m_LocalPosition: {x: 48.5037231, y: -3.35176086, z: 47.4859772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 862351109}
   m_RootOrder: 3
+--- !u!1 &2130209952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2130209953}
+  - 114: {fileID: 2130209955}
+  - 135: {fileID: 2130209954}
+  m_Layer: 0
+  m_Name: random beach light 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130209953
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130209952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1032.55493, y: -88.4855042, z: 615.786804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327726662}
+  m_RootOrder: 15
+--- !u!135 &2130209954
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130209952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 50.7999992
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2130209955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130209952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e8bc2f63c3b2e429d01c9753002d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 686181064}
+  intensityOverTime:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00559262
+      value: -.0277580284
+      inSlope: .0181993004
+      outSlope: .0181993004
+      tangentMode: 0
+    - time: .142447546
+      value: .973338127
+      inSlope: .0355012044
+      outSlope: .0355012044
+      tangentMode: 0
+    - time: 3.68753862
+      value: .98136127
+      inSlope: -.0311542097
+      outSlope: -.0311542097
+      tangentMode: 0
+    - time: 3.85603571
+      value: -.00879536197
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  duration: 4
+  randomDelayMin: 2
+  randomDelayMax: 5
 --- !u!1 &2133811013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5712,7 +7149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &2133811014
 Light:
   m_ObjectHideFlags: 0
