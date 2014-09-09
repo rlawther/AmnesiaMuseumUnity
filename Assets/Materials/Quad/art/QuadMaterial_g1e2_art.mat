@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: QuadMaterial_g1e2_art
-  m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 34, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -47,6 +47,18 @@ Material:
         first:
           name: _EmissionLM
         second: 0
+      data:
+        first:
+          name: _HueShift
+        second: 4.13000011
+      data:
+        first:
+          name: _Sat
+        second: 5.59000015
+      data:
+        first:
+          name: _Val
+        second: 8.06000042
     m_Colors:
       data:
         first:
