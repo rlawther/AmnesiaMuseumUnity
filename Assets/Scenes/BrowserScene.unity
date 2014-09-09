@@ -6064,7 +6064,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 1
+  useAVIECamera: 0
 --- !u!114 &2108953014
 MonoBehaviour:
   m_ObjectHideFlags: 0
