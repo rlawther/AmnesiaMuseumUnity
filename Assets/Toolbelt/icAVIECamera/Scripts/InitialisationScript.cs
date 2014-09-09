@@ -27,7 +27,7 @@ public class InitialisationScript : MonoBehaviour, icDebugGUI, StereoCameraInter
 	[SerializeField]
 	private bool
 		InputEnabled = false;
-	[Range(1, 12)]
+	[Range(1, 6)]
 	public int
 		_numIGs = 6;
 	[Range(1, 16)]
@@ -73,9 +73,7 @@ public class InitialisationScript : MonoBehaviour, icDebugGUI, StereoCameraInter
 		TRIPLE_IG,
 		LEFT_BLANK,
 		BLANK_RIGHT,
-		LEFT_RIGHT,
-		TOP_BOTTOM
-	}
+		LEFT_RIGHT}
 	;
 
 	public DisplayConfigurations _displayConfiguration = DisplayConfigurations.MASTER;
@@ -234,25 +232,12 @@ public class InitialisationScript : MonoBehaviour, icDebugGUI, StereoCameraInter
 			leftProjector._orthographicCamera.camera.rect = new Rect (0, 0, 0.5f, 1.0f);
 			leftProjector._orthographicCamera.SetActive (true);
 			leftProjector.warpMeshObject.SetActive (true);
-			
+
 			ProjectorDescription rightProjector = _projectors [1];
 			rightProjector._orthographicCamera.camera.rect = new Rect (0.5f, 0, 0.5f, 1.0f);
 			rightProjector._orthographicCamera.SetActive (true);
 			rightProjector.warpMeshObject.SetActive (true);
-			
-			_masterCamera.camera.enabled = false;
-		}else if (_internalDisplayConfiguration == DisplayConfigurations.TOP_BOTTOM) {
-			// There should only be two projectors per slave
-			ProjectorDescription leftProjector = _projectors [0];
-			leftProjector._orthographicCamera.camera.rect = new Rect (0, 0, 0.5f, 0.5f);
-			leftProjector._orthographicCamera.SetActive (true);
-			leftProjector.warpMeshObject.SetActive (true);
-			
-			ProjectorDescription rightProjector = _projectors [1];
-			rightProjector._orthographicCamera.camera.rect = new Rect (0, 0.5f, 0.5f, 0.5f);
-			rightProjector._orthographicCamera.SetActive (true);
-			rightProjector.warpMeshObject.SetActive (true);
-			
+            
 			_masterCamera.camera.enabled = false;
 		} else if (_internalDisplayConfiguration == DisplayConfigurations.MULTI_VIEW) {
 			float screenWidth = 1.0f / 6.0f;

@@ -69,12 +69,19 @@ public class Spin : MonoBehaviour {
 			}
 			else if (touch.phase == TouchPhase.Moved)
 			{
+				Vector3 cameraPos;
+				/*
 				ang -= touch.deltaPosition.x * sensitivityRotate;
 				elevation += touch.deltaPosition.y * sensitivityElevate;
 				if (elevation < 0)
 					elevation = 0;
 				else if (elevation > (Mathf.PI / 2.0f))
 					elevation = Mathf.PI / 2.0f;
+				*/
+				cameraPos = camera.transform.position;
+				cameraPos.x += touch.deltaPosition.x;
+				cameraPos.z += touch.deltaPosition.y;
+				camera.transform.position = cameraPos;
 				touchMoved = true;
 			}
 			else if (touch.phase == TouchPhase.Ended)
@@ -102,9 +109,9 @@ public class Spin : MonoBehaviour {
 				pinching = true;
 				pinchDist = Vector2.Distance(t1.position, t2.position);
 				oldTouchPos = t1.position;
-				forwardDir = this.gameObject.transform.forward;
+				forwardDir = camera.transform.forward;
 				forwardDir.y = 0;
-				rightDir = this.gameObject.transform.right;
+				rightDir = camera.transform.right;
 				rightDir.y = 0;
 			} else {
 				float oldPinchdist = pinchDist;
@@ -144,8 +151,8 @@ public class Spin : MonoBehaviour {
 		z = radius * Mathf.Sin(ang) * Mathf.Sin(elevation);
 		y = radius * Mathf.Cos(elevation);
 
-		camera.transform.localPosition = new Vector3(x, y, z) + orbitAround.position + offset;
-		camera.transform.LookAt(orbitAround.position + offset);
+		//camera.transform.localPosition = new Vector3(x, y, z) + orbitAround.position + offset;
+		//camera.transform.LookAt(orbitAround.position + offset);
 
 		Kernys.Bson.BSONObject bsonObj = new Kernys.Bson.BSONObject();
 		bsonObj.Add ("x", jstick.position.x);
