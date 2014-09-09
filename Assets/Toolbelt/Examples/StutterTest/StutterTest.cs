@@ -12,7 +12,7 @@ public class StutterTest : MonoBehaviour {
 	void Start () {
 	
 #if NO_CLUSTER
-#elif
+#else
 		isMaster = ClusterNetwork.IsMasterOfCluster();
 #endif
 	}
