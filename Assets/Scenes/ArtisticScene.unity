@@ -5520,9 +5520,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3119e99cdc4e13a4fb637c9f85465511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fog: 0
+  fog: 1
   fogColour: {r: 0, g: 0, b: 0, a: 0}
-  fogDensity: 0
+  fogDensity: .0199999996
   ambientLight: {r: 0, g: 0, b: 0, a: 0}
   skyboxMaterial: {fileID: 2100000, guid: a58dbb749704d944f910ac2e4d24e83b, type: 2}
 --- !u!1 &1615908231

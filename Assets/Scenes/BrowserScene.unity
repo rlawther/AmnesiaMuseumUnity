@@ -1581,7 +1581,7 @@ MonoBehaviour:
   fog: 0
   fogColour: {r: .0570934415, g: .0855744407, b: .647058845, a: 0}
   fogDensity: .200000003
-  ambientLight: {r: 0, g: 0, b: 0, a: 0}
+  ambientLight: {r: 0, g: 0, b: 0, a: 1}
   skyboxMaterial: {fileID: 2100000, guid: 9701252f373944803bdb19d62b4da717, type: 2}
 --- !u!1 &595622551
 GameObject:
