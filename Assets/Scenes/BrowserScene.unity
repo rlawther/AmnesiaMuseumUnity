@@ -1940,7 +1940,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 252f7ac25c16a4215acb09d5e4992647, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .354000002
+  m_Volume: .433999985
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3139,6 +3139,7 @@ GameObject:
   - 114: {fileID: 1115516428}
   - 114: {fileID: 1115516427}
   - 114: {fileID: 1115516426}
+  - 81: {fileID: 1115516431}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -3265,6 +3266,13 @@ Transform:
   - {fileID: 89564224}
   m_Father: {fileID: 246234290}
   m_RootOrder: 0
+--- !u!81 &1115516431
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1115516425}
+  m_Enabled: 1
 --- !u!1 &1123191993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,7 +5423,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 77.1627502
-  MaxDistance: 119.935181
+  MaxDistance: 202.257141
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
