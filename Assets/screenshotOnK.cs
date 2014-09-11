@@ -3,13 +3,14 @@ using System.Collections;
 
 public class screenshotOnK : MonoBehaviour {
 
-	private bool takeHiResShot = false;
+	//private bool takeHiResShot = false;
 	private int shotNumber = 0;
 	
-		
+	/*	
 	public void TakeHiResShot() {
 		takeHiResShot = true;
 	}
+	*/
 	
 	void LateUpdate() {
 		//takeHiResShot |= ;

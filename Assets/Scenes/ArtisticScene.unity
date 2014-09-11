@@ -114,7 +114,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 1760345333}
   m_GameObject: {fileID: 6181809}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &6181812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4135,6 +4135,7 @@ GameObject:
   - 114: {fileID: 1115516428}
   - 114: {fileID: 1115516427}
   - 114: {fileID: 1115516426}
+  - 81: {fileID: 1115516431}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -4261,6 +4262,13 @@ Transform:
   - {fileID: 2054299355}
   m_Father: {fileID: 1618348267}
   m_RootOrder: 0
+--- !u!81 &1115516431
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1115516425}
+  m_Enabled: 1
 --- !u!1 &1125196014
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5506,7 @@ MonoBehaviour:
   ic: {fileID: 1115516426}
   yAxisTurn: 0
   firstPersonController: {fileID: 0}
+  listenPort: 0
 --- !u!114 &1608910742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6221,6 +6230,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
