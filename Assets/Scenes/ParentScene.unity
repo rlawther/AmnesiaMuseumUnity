@@ -225,6 +225,7 @@ MonoBehaviour:
   ic: {fileID: 1115516426}
   yAxisTurn: 0
   firstPersonController: {fileID: 0}
+  listenPort: 0
 --- !u!1 &20017307
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +626,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: _displayConfiguration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: showBlend
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: doWarp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: _numIGs
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: _numSlicesPerIG
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
   m_RootGameObject: {fileID: 20017307}
@@ -700,6 +721,7 @@ GameObject:
   - 114: {fileID: 1115516428}
   - 114: {fileID: 1115516427}
   - 114: {fileID: 1115516426}
+  - 81: {fileID: 1115516431}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -826,6 +848,13 @@ Transform:
   - {fileID: 20017308}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!81 &1115516431
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1115516425}
+  m_Enabled: 1
 --- !u!1 &1318915399
 GameObject:
   m_ObjectHideFlags: 0
