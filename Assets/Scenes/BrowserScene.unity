@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &89564224
 Transform:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 161522355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.973083, y: -8.11310196, z: -26.9180298}
+  m_LocalPosition: {x: 141.865784, y: -8.11310196, z: -26.9180298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624983538}
@@ -705,8 +705,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 15.1000004
-  MaxDistance: 52.493988
+  MinDistance: 23.6032104
+  MaxDistance: 112.627014
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -788,7 +788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
       propertyPath: _displayConfiguration
@@ -1523,6 +1523,7 @@ GameObject:
   - 114: {fileID: 560521053}
   - 114: {fileID: 560521054}
   - 114: {fileID: 560521055}
+  - 114: {fileID: 560521056}
   m_Layer: 0
   m_Name: BaseScripts
   m_TagString: Untagged
@@ -1556,6 +1557,7 @@ MonoBehaviour:
   ic: {fileID: 1115516426}
   yAxisTurn: 1
   firstPersonController: {fileID: 1115516425}
+  listenPort: 5553
 --- !u!114 &560521054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,7 +1584,22 @@ MonoBehaviour:
   fogColour: {r: .0570934415, g: .0855744407, b: .647058845, a: 0}
   fogDensity: .200000003
   ambientLight: {r: 0, g: 0, b: 0, a: 1}
-  skyboxMaterial: {fileID: 0}
+  skyboxMaterial: {fileID: 2100000, guid: 9701252f373944803bdb19d62b4da717, type: 2}
+--- !u!114 &560521056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560521051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7671689f0147e1498ea5f05a682f3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remoteHost: 10.0.16.100
+  remotePort: 6550
+  sendEveryXFrames: 1
+  playerPosition: {fileID: 1115516425}
 --- !u!1 &595622551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,8 +1622,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595622551}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.5140991, y: -13.3715553, z: -9.33407593}
+  m_LocalRotation: {x: 0, y: 0, z: .0294889715, w: .999565125}
+  m_LocalPosition: {x: -56.8161011, y: -13.3715553, z: -11.3806458}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624983538}
@@ -1627,8 +1644,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 37.9858398
-  MaxDistance: 55.5535278
+  MinDistance: 13.4745789
+  MaxDistance: 170.368896
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -2111,7 +2128,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800710889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.9066772, y: -8.11310196, z: 39.5879517}
+  m_LocalPosition: {x: -34.4468994, y: -8.11310196, z: 49.7918091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624983538}
@@ -2132,8 +2149,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 15.1000004
-  MaxDistance: 26.3913269
+  MinDistance: 47.4122314
+  MaxDistance: 147.009338
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -2142,7 +2159,7 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - time: .302000016
+    - time: .332612276
       value: 1
       inSlope: 0
       outSlope: 0
@@ -3925,8 +3942,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 18.5928955
-  MaxDistance: 35.0362854
+  MinDistance: 34.7490234
+  MaxDistance: 201.990051
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -5071,7 +5088,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 20.7211304
-  MaxDistance: 50
+  MaxDistance: 115.747925
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -5401,7 +5418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1944161119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.648376, y: 0, z: 409.770752}
+  m_LocalPosition: {x: 117.541077, y: 0, z: 409.770752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1624983538}
@@ -5422,8 +5439,8 @@ AudioSource:
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 77.1627502
-  MaxDistance: 202.257141
+  MinDistance: 77.1274414
+  MaxDistance: 272.076843
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -6079,15 +6096,15 @@ MonoBehaviour:
   tvisLayout: 0
   datasets:
   - csvMetadataFile: {fileID: 4900000, guid: 66c7a687bf9bdde4a9b9b553628b7e49, type: 3}
-    imageDirectory: /Volumes/Data/Users/z3050550/Documents/Amnesia/MEDIA/G1_img_sml
+    imageDirectory: C:\Media\Amnesia\G1_img_sml
     imageExtension: 
     quadTemplates:
     - {fileID: 1219079612}
     - {fileID: 1219079612}
     - {fileID: 910759565}
     - {fileID: 705441260}
-  - csvMetadataFile: {fileID: 4900000, guid: e66b38e1b1e071c42bedfc12e5be0a4a, type: 3}
-    imageDirectory: /Volumes/Data/Users/z3050550/Documents/Amnesia/MEDIA/G2_img_sml
+  - csvMetadataFile: {fileID: 4900000, guid: 367e3f233316b16489aeb468a9764909, type: 3}
+    imageDirectory: C:\Media\Amnesia\G2_img_sml
     imageExtension: 
     quadTemplates:
     - {fileID: 2015404405}

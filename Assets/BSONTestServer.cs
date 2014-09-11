@@ -10,16 +10,20 @@ public class BSONTestServer : MonoBehaviour {
 	public FPSInputController ic;
 	public bool yAxisTurn;
 	public GameObject firstPersonController;
+	public int listenPort;
+
 	// Use this for initialization
 	void Start () {
 	
-		bl = new BSONListener(5559);
+		bl = new BSONListener(listenPort);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 		BSONObject bo;
+		Vector3 newPosition = new Vector3(0, 0, 0);
+		bool moveToNewPosition = false;
 		//ic.directionVector.x = 1.0f;
 		//Debug.Log ("set dir");
 
@@ -47,6 +51,27 @@ public class BSONTestServer : MonoBehaviour {
 				else
 					ic.networkDirectionVector.x = bo["x"];
 			}
+			if (bo.ContainsKey("movex"))
+			{
+				moveToNewPosition = true;
+				newPosition.x = bo["movex"];
+				Debug.Log ("movex : " + bo["movex"]);
+			}
+			if (bo.ContainsKey("movey"))
+			{
+				moveToNewPosition = true;
+				newPosition.y = bo["movey"];
+			}
+			if (bo.ContainsKey("movez"))
+			{
+				moveToNewPosition = true;
+				newPosition.z = bo["movez"];
+			}
+			if (moveToNewPosition)
+			{
+				firstPersonController.transform.position = newPosition;
+			}
+
 			if (bo.ContainsKey("button"))
 			{
 				if (string.Equals (bo["button"], "artistic"))
