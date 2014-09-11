@@ -6046,6 +6046,7 @@ GameObject:
   - 114: {fileID: 2108953014}
   - 114: {fileID: 2108953009}
   - 114: {fileID: 2108953015}
+  - 114: {fileID: 2108953010}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -6082,6 +6083,17 @@ MonoBehaviour:
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
   useAVIECamera: 0
+--- !u!114 &2108953010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108953007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2d9829e6fb2c24ba80e52772b5e2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2108953014
 MonoBehaviour:
   m_ObjectHideFlags: 0
