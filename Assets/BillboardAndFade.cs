@@ -6,6 +6,7 @@ public class BillboardAndFade : MonoBehaviour {
 	public bool applyBillboard;
 	public float []billboardRadius;
 	public bool applyFade;
+
 	public AnimationCurve []fadeCurve;
 	public AnimationCurve fadeCurveG1E1;
 	public AnimationCurve fadeCurveG1E2;
@@ -16,6 +17,16 @@ public class BillboardAndFade : MonoBehaviour {
 	public AnimationCurve fadeCurveG2E4;
 	public float fadeDistanceMultiplier;
 
+	public bool applyBlack;
+	public AnimationCurve []BlackCurve;
+	public AnimationCurve BlackCurveG1E1;
+	public AnimationCurve BlackCurveG1E2;
+	public AnimationCurve BlackCurveG1E3;
+	public AnimationCurve BlackCurveG2E1;
+	public AnimationCurve BlackCurveG2E2;
+	public AnimationCurve BlackCurveG2E3;
+	public AnimationCurve BlackCurveG2E4;
+
 	private VisualizerManager visManager;
 	private GameObject player;
 	
@@ -25,6 +36,7 @@ public class BillboardAndFade : MonoBehaviour {
 	void Start () {
 		this.visManager = gameObject.GetComponent<VisualizerManager> ();
 		player = GameObject.Find ("First Person Controller");
+
 		fadeCurve = new AnimationCurve[7];
 		fadeCurve[0] = fadeCurveG1E1;
 		fadeCurve[1] = fadeCurveG1E2;
@@ -33,6 +45,16 @@ public class BillboardAndFade : MonoBehaviour {
 		fadeCurve[4] = fadeCurveG2E2;
 		fadeCurve[5] = fadeCurveG2E3;
 		fadeCurve[6] = fadeCurveG2E4;
+
+		BlackCurve = new AnimationCurve[7];
+		BlackCurve [0] = BlackCurveG1E1;
+		BlackCurve [1] = BlackCurveG1E2;
+		BlackCurve [2] = BlackCurveG1E3;
+		BlackCurve [3] = BlackCurveG2E1;
+		BlackCurve [4] = BlackCurveG2E2;
+		BlackCurve [5] = BlackCurveG2E3;
+		BlackCurve [6] = BlackCurveG2E4;
+
 	}
 	
 	// Update is called once per frame
@@ -60,6 +82,12 @@ public class BillboardAndFade : MonoBehaviour {
 					{
 						photo.gameObject.renderer.material.color = 
 							new Color (1.0f, 1.0f, 1.0f, fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier));
+					}
+					if (applyBlack)
+					{
+						photo.gameObject.renderer.material.color = 
+							new Color (fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier),fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier), fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier), 1.0f);
+
 					}
 					if (applyBillboard)
 					{

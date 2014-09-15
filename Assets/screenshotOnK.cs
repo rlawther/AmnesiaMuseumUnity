@@ -16,7 +16,7 @@ public class screenshotOnK : MonoBehaviour {
 		//takeHiResShot |= ;
 		if (Input.GetKeyDown("k")) {
 			print ("screengrap");
-			Application.CaptureScreenshot("C:/Dev/AmnesiaMuseumUnity/Assets/Screenshot" + shotNumber + ".png");
+			Application.CaptureScreenshot("C:/Dev/AmnesiaMuseumUnity/Screenshot" + shotNumber + ".png");
 			shotNumber++;
 			//takeHiResShot = false;
 		}
