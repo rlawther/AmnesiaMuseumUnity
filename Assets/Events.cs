@@ -171,6 +171,7 @@ public class Events
 			{
 				togglePathActive(1);
 				eventTimeout = delayUntilNextEvent;
+				Debug.Log ("active path 1");
 			}
 			else if (Input.GetKey(KeyCode.Keypad3))
 			{

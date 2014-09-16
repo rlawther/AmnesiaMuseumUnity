@@ -389,11 +389,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 89564223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c70ed39c2e4b9d41b9ca440873d2f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 805a3d4c9f3850c4a83ef400d0d6838e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HSL: {x: 0, y: 1, z: 1}
   BrightnessContrastGamma: {x: .5, y: .5, z: 1}
+  forcePropagate: 1
 --- !u!114 &89564232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,6 +1488,7 @@ GameObject:
   - 114: {fileID: 560521055}
   - 114: {fileID: 560521056}
   - 114: {fileID: 560521057}
+  - 114: {fileID: 560521058}
   m_Layer: 0
   m_Name: BaseScripts
   m_TagString: Untagged
@@ -1532,6 +1534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbfbc5a6f2867941aadad7dabb1c352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrain: {fileID: 1345082643}
+  delayUntilNextEvent: .5
 --- !u!114 &560521055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,7 +1558,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560521051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7671689f0147e1498ea5f05a682f3c6, type: 3}
   m_Name: 
@@ -1584,6 +1588,31 @@ MonoBehaviour:
   allowDrag: 1
   frequency: .5
   nbDecimal: 1
+--- !u!114 &560521058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560521051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42991e87543ebf34fa870723839c557d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTexture: {fileID: 2800000, guid: 4230b8ec90f0b4fa7820ab811a73ad21, type: 3}
+  playerSize: {x: 10, y: 10}
+  playerAlpha: .699999988
+  mapTexture: {fileID: 2800000, guid: 8869c305c2819f7498f3ed975eb9b4fd, type: 3}
+  mapAlpha: .699999988
+  mapPosition:
+    serializedVersion: 2
+    x: 10
+    y: 10
+    width: 400
+    height: 400
+  drawInBothEyes: 1
+  rightEyeOffset: {x: 0, y: 1050}
+  firstPersonController: {fileID: 1115516425}
 --- !u!1 &614242646
 GameObject:
   m_ObjectHideFlags: 0

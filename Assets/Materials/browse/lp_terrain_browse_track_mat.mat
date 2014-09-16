@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: lp_terrain_browse_track_mat
-  m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: eeb9ad8198025714ea98e30fb2a12375, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -32,6 +32,48 @@ Material:
           name: _Illum
         second:
           m_Texture: {fileID: 2800000, guid: c24f65852ac72445c8d2a63f306a5c35, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer1
+        second:
+          m_Texture: {fileID: 2800000, guid: b21b5459db53e4e9f80a5f8ae7105588, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer2
+        second:
+          m_Texture: {fileID: 2800000, guid: cf27d732fef604233b12df66f0a7a75e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer3
+        second:
+          m_Texture: {fileID: 2800000, guid: d0c775b151154453e853230efa9b098b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer4
+        second:
+          m_Texture: {fileID: 2800000, guid: faa530944f5e941be86411a1449d719d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer5
+        second:
+          m_Texture: {fileID: 2800000, guid: bb37d3ee895b244b7b7fcbda3874e370, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Layer6
+        second:
+          m_Texture: {fileID: 2800000, guid: d82bba411526f004a950f8d21cff0236, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -60,3 +102,27 @@ Material:
         first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Colour1
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Colour2
+        second: {r: .86206913, g: 0, b: 1, a: 1}
+      data:
+        first:
+          name: _Colour3
+        second: {r: .117241383, g: 0, b: 1, a: 1}
+      data:
+        first:
+          name: _Colour4
+        second: {r: 0, g: .917241335, b: 1, a: 1}
+      data:
+        first:
+          name: _Colour5
+        second: {r: 0, g: 1, b: .00689649582, a: 1}
+      data:
+        first:
+          name: _Colour6
+        second: {r: .944827557, g: 1, b: 0, a: 1}
