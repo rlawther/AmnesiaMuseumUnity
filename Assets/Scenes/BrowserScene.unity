@@ -410,7 +410,7 @@ MonoBehaviour:
   InputEnabled: 0
   _numIGs: 12
   _numSlicesPerIG: 4
-  eyeWidth: .100000001
+  eyeWidth: -.150000006
   eyeHeight: 10
   showBlend: 0
   doWarp: 0
@@ -559,6 +559,10 @@ Prefab:
     - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
       propertyPath: doWarp
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
+      propertyPath: eyeWidth
+      value: -.150000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae6e2df72cc90b94da777eac8a887c0c, type: 2}
@@ -1484,7 +1488,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 560521052}
   - 114: {fileID: 560521053}
-  - 114: {fileID: 560521054}
   - 114: {fileID: 560521055}
   - 114: {fileID: 560521056}
   - 114: {fileID: 560521057}
@@ -1523,19 +1526,6 @@ MonoBehaviour:
   yAxisTurn: 1
   firstPersonController: {fileID: 1115516425}
   listenPort: 5551
---- !u!114 &560521054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 560521051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbfbc5a6f2867941aadad7dabb1c352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 1345082643}
-  delayUntilNextEvent: .5
 --- !u!114 &560521055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,8 +1601,15 @@ MonoBehaviour:
     width: 400
     height: 400
   drawInBothEyes: 1
-  rightEyeOffset: {x: 0, y: 1050}
+  rightEyeOffset: {x: 5, y: 1050}
   firstPersonController: {fileID: 1115516425}
+  pathTextures:
+  - {fileID: 2800000, guid: 051f5734b773f0642835c12aacb4ef48, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &614242646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6387,6 +6384,7 @@ GameObject:
   - 114: {fileID: 2108953009}
   - 114: {fileID: 2108953015}
   - 114: {fileID: 2108953010}
+  - 114: {fileID: 2108953011}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -6422,7 +6420,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 0
+  useAVIECamera: 1
 --- !u!114 &2108953010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6434,6 +6432,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2d9829e6fb2c24ba80e52772b5e2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2108953011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108953007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbfbc5a6f2867941aadad7dabb1c352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1345082643}
+  delayUntilNextEvent: .5
 --- !u!114 &2108953014
 MonoBehaviour:
   m_ObjectHideFlags: 0
