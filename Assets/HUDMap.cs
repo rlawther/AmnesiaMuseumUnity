@@ -13,7 +13,7 @@ public class HUDMap : MonoBehaviour {
 	public Vector2 rightEyeOffset;
 	public GameObject firstPersonController;
 
-	public Texture path1Texture;
+	public Texture [] pathTextures;
 	
 	private Vector2 mapBottomLeft;
 	private Vector2 mapTopRight;
@@ -90,9 +90,11 @@ public class HUDMap : MonoBehaviour {
 		                                              mapPosition.y + (mapPosition.height/2.0f)));
 		GUI.DrawTexture(mapPosition, mapTexture);
 
-		if (paths[1].activeSelf)
-			GUI.DrawTexture(mapPosition, path1Texture);
-
+		for (int i = 0; i < 6; i++)
+		{
+			if (paths[i].activeSelf)
+				GUI.DrawTexture (mapPosition, pathTextures[i]);
+		}
 
 		newColour.a = playerAlpha;
 		GUI.color = newColour;
@@ -111,7 +113,13 @@ public class HUDMap : MonoBehaviour {
 			rightEyePos.x += rightEyeOffset.x;
 			rightEyePos.y += rightEyeOffset.y;
 			GUI.DrawTexture(rightEyePos, mapTexture);
-			
+
+			for (int i = 0; i < 6; i++)
+			{
+				if (paths[i].activeSelf)
+					GUI.DrawTexture (rightEyePos, pathTextures[i]);
+			}
+
 			newColour.a = playerAlpha;
 			GUI.color = newColour;
 			drawPlayer (rightEyePos);
