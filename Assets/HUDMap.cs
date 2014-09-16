@@ -55,18 +55,26 @@ public class HUDMap : MonoBehaviour {
 		newColour = GUI.color;
 		newColour.a = mapAlpha;
 		GUI.color = newColour;
+
+		Matrix4x4 matrixBackup = GUI.matrix;
+		GUIUtility.RotateAroundPivot(-90, new Vector2(mapPosition.x + (mapPosition.width/2.0f),
+		                                              mapPosition.y + (mapPosition.height/2.0f)));
 		GUI.DrawTexture(mapPosition, mapTexture);
-		
+
+
 		newColour.a = playerAlpha;
 		GUI.color = newColour;
 		drawPlayer (mapPosition);
-		
+		GUI.matrix = matrixBackup;
+
 		newColour.a = mapAlpha;
 		GUI.color = newColour;
 		
 		if (drawInBothEyes)
 		{
 			Rect rightEyePos;
+			GUIUtility.RotateAroundPivot(-90, new Vector2(rightEyeOffset.x + mapPosition.x + (mapPosition.width/2.0f),
+			                                              rightEyeOffset.y + mapPosition.y + (mapPosition.height/2.0f)));
 			rightEyePos = mapPosition;
 			rightEyePos.x += rightEyeOffset.x;
 			rightEyePos.y += rightEyeOffset.y;
@@ -78,5 +86,7 @@ public class HUDMap : MonoBehaviour {
 		}
 		
 		GUI.color = oldColour;
+		GUI.matrix = matrixBackup;
+
 	}
 }
