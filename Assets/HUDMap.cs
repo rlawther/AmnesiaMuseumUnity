@@ -12,12 +12,32 @@ public class HUDMap : MonoBehaviour {
 	public bool drawInBothEyes;
 	public Vector2 rightEyeOffset;
 	public GameObject firstPersonController;
+
+	public Texture path1Texture;
 	
 	private Vector2 mapBottomLeft;
 	private Vector2 mapTopRight;
 	private Vector2 mapSize;
-	
 
+	private bool gotParent = false;
+	private GameObject photoParent;
+	private GameObject [] paths;
+
+	void findPaths(GameObject parent)
+	{
+		int i = 0;
+		foreach (Transform scenario in parent.transform)
+		{
+			foreach (Transform episode in scenario.transform)
+			{
+				paths[i] = episode.gameObject;
+				i++;
+			}
+		}
+		
+	}
+
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -25,12 +45,21 @@ public class HUDMap : MonoBehaviour {
 		mapBottomLeft = new Vector2(636, -275);
 		mapTopRight = new Vector2(1524, 745);
 		mapSize = mapTopRight - mapBottomLeft;
-	
+
+		paths = new GameObject[7];
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (!gotParent && (Time.time > 1.0))
+		{
+			GameObject photoParent = GameObject.Find ("Photos");
+			findPaths (photoParent);
+			
+			gotParent = true;
+		}
+
 	}
 	
 	void drawPlayer(Rect mapPos)
@@ -60,6 +89,9 @@ public class HUDMap : MonoBehaviour {
 		GUIUtility.RotateAroundPivot(-90, new Vector2(mapPosition.x + (mapPosition.width/2.0f),
 		                                              mapPosition.y + (mapPosition.height/2.0f)));
 		GUI.DrawTexture(mapPosition, mapTexture);
+
+		if (paths[1].activeSelf)
+			GUI.DrawTexture(mapPosition, path1Texture);
 
 
 		newColour.a = playerAlpha;
