@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/BrowserScene.unity
   - enabled: 0
     path: Assets/Scenes/MobileScene.unity
+  - enabled: 0
+    path: Assets/Scenes/BrowserSceneJ.unity

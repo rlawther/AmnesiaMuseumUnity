@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: lp_terrain_browse_mat
-  m_Shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 5, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,21 +17,21 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 5736796a047e547a5bd0ead4dc7ac10a, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Illum
-        second:
-          m_Texture: {fileID: 2800000, guid: c24f65852ac72445c8d2a63f306a5c35, type: 3}
+          m_Texture: {fileID: 2800000, guid: d348de3b6e2d75c4cae996797fcc4ac8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Detail
         second:
-          m_Texture: {fileID: 2800000, guid: 22915c9a03ff543e4b4d46be06c9ebb6, type: 3}
+          m_Texture: {fileID: 2800000, guid: 26c71ae422dad6d419ad351ffda77ca6, type: 3}
+          m_Scale: {x: 80, y: 80}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 2800000, guid: c24f65852ac72445c8d2a63f306a5c35, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -51,7 +51,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .727941155, g: .727941155, b: .727941155, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _SpecColor
