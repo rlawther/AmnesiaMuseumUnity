@@ -97,11 +97,13 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 		int episodeNum = 0;
 		float col;
 
+		/*
 		if (!calcedZones && (Time.time > 1.0))
 		{
 			calcCollisionQuads ();
 			calcedZones = true;
 		}
+		*/
 
 		if (player == null)
 		{
@@ -152,6 +154,7 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 			}
 		}
 
+		/*
 		foreach (CollisionZoneData cz in collisionZoneInfo) 
 		{
 			foreach (GameObject photo in cz.affectedQuads)
@@ -159,6 +162,7 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 				photo.renderer.material.color = new Color (1.0f, 0.0f, 0.0f, 1.0f);
 			}
 		}
+		*/
 		
 	}
 }

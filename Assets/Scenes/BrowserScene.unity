@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6181810
 Transform:
   m_ObjectHideFlags: 0
@@ -4192,6 +4192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53bdc70242950545b562c99a4082cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  affectedQuads: []
 --- !u!1 &1406754380
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,7 +5436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_Enabled
@@ -6503,7 +6504,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 1
+  useAVIECamera: 0
 --- !u!114 &2108953010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6534,7 +6535,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108953007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1888874ca8d561488f9af30b4cdd2a3, type: 3}
   m_Name: 
@@ -6757,7 +6758,7 @@ MonoBehaviour:
     - {fileID: 1712762955}
     - {fileID: 1695448295}
     - {fileID: 2103519104}
-  usePhotos: 1
+  usePhotos: 0
   visualizations: []
   currentlySelectedVis: 0
   lineMaterial: {fileID: 2100000, guid: ed7a07c7e00e24e258ff18b53637dad7, type: 2}
