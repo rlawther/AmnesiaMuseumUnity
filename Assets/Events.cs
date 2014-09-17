@@ -5,7 +5,7 @@ public class Events
  : MonoBehaviour {
  
  	public GameObject terrain;
- 	private bool mArtisticMode = true;
+ 	private bool mAmnesiaMode = true;
  	private GameObject mActiveNarrativeScenario = null;
  	
 	private Texture [] layerTextures;
@@ -112,10 +112,10 @@ public class Events
 	
 		if (Input.GetKey("o"))
 		{
-			if (!mArtisticMode)
+			if (!mAmnesiaMode)
 			{
-				Debug.Log ("Into artisitc");
-				mArtisticMode = true;
+				Debug.Log ("Into Amnesia Mode");
+				mAmnesiaMode = true;
 				LoadLevels.artisticSceneParent.SetActive(true);
 				LoadLevels.browserSceneParent.SetActive(false);
 				rss = LoadLevels.artisticSceneParent.transform.Find("Scripts/BaseScripts").GetComponent<RenderSettingsSetter>();
@@ -127,10 +127,10 @@ public class Events
 		}
 		else if (Input.GetKey("p"))
 		{
-			if (mArtisticMode)
+			if (mAmnesiaMode)
 			{
-				Debug.Log ("Into browser" + LoadLevels.artisticSceneParent);
-				mArtisticMode = false;
+				Debug.Log ("Into Browser Mode");
+				mAmnesiaMode = false;
 				
 				LoadLevels.artisticSceneParent.SetActive(false);
 				LoadLevels.browserSceneParent.SetActive(true);
@@ -141,64 +141,41 @@ public class Events
 				
 			}
 		}
-		
-		if (Input.GetKey ("1"))
-		{
-			Debug.Log ("group 1");
-			mActiveNarrativeScenario = setOnlyActiveChild(photoParent, 1);
-			
-			//terrain.renderer.material.SetTexture("_Layer1", layer1tex);
-			terrain.renderer.material.SetTexture("_Layer2", null);
-		}
-		else if (Input.GetKey ("2"))
-		{
-			Debug.Log ("group 2");
-			mActiveNarrativeScenario = setOnlyActiveChild(photoParent, 2);
-			terrain.renderer.material.SetTexture("_Layer1", null);
-			//terrain.renderer.material.SetTexture("_Layer2", layer2tex);
-		}
-		
+
 		if (eventTimeout <= 0)
 		{
-			if (Input.GetKey(KeyCode.Keypad0))
-				setAllActiveChildren(mActiveNarrativeScenario);
-			else if (Input.GetKey(KeyCode.Keypad1))
+			if (Input.GetKey("1"))
 			{
 				togglePathActive(0);
 				eventTimeout = delayUntilNextEvent;
 			}
-			else if (Input.GetKey(KeyCode.Keypad2))
+			else if (Input.GetKey("2"))
 			{
 				togglePathActive(1);
 				eventTimeout = delayUntilNextEvent;
 				Debug.Log ("active path 1");
 			}
-			else if (Input.GetKey(KeyCode.Keypad3))
+			else if (Input.GetKey("3"))
 			{
 				togglePathActive(2);
 				eventTimeout = delayUntilNextEvent;
 			}
-			else if (Input.GetKey(KeyCode.Keypad4))
+			else if (Input.GetKey("4"))
 			{
 				togglePathActive(3);
 				eventTimeout = delayUntilNextEvent;
 			}
-			else if (Input.GetKey(KeyCode.Keypad5))
+			else if (Input.GetKey("5"))
 			{
 				togglePathActive(4);
 				eventTimeout = delayUntilNextEvent;
 			}
-			else if (Input.GetKey(KeyCode.Keypad6))
+			else if (Input.GetKey("6"))
 			{
 				togglePathActive(5);
 				eventTimeout = delayUntilNextEvent;
 			}
-			else if (Input.GetKey(KeyCode.Keypad7))
-			{
-				togglePathActive(6);
-				eventTimeout = delayUntilNextEvent;
-			}
-			
+
 		}
 		else
 		{

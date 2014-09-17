@@ -8,6 +8,7 @@ public class HUDMap : MonoBehaviour {
 	public float playerAlpha;
 	public Texture mapTexture;
 	public float mapAlpha;
+	public float trackAlpha;
 	public Rect mapPosition;
 	public bool drawInBothEyes;
 	public Vector2 rightEyeOffset;
@@ -92,6 +93,9 @@ public class HUDMap : MonoBehaviour {
 		                                              
 		GUI.DrawTexture(mapPosition, mapTexture);
 
+		newColour.a = trackAlpha;
+		GUI.color = newColour;
+
 		for (int i = 0; i < 6; i++)
 		{
 			if (paths[i].activeSelf)
@@ -103,9 +107,7 @@ public class HUDMap : MonoBehaviour {
 		drawPlayer (mapPosition);
 		GUI.matrix = matrixBackup;
 
-		newColour.a = mapAlpha;
-		GUI.color = newColour;
-		
+
 		if (drawInBothEyes)
 		{
 			Rect rightEyePos;
@@ -114,8 +116,13 @@ public class HUDMap : MonoBehaviour {
 			rightEyePos = mapPosition;
 			rightEyePos.x += rightEyeOffset.x;
 			rightEyePos.y += rightEyeOffset.y;
+
+			newColour.a = mapAlpha;
+			GUI.color = newColour;
 			GUI.DrawTexture(rightEyePos, mapTexture);
 
+			newColour.a = trackAlpha;
+			GUI.color = newColour;
 			for (int i = 0; i < 6; i++)
 			{
 				if (paths[i].activeSelf)

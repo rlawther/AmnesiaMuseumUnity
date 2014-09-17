@@ -1590,18 +1590,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTexture: {fileID: 2800000, guid: aebfb9eea4afd7a42b4f7b184207c3c2, type: 3}
-  playerSize: {x: 10, y: 10}
+  playerSize: {x: 20, y: 20}
   playerAlpha: 1
   mapTexture: {fileID: 2800000, guid: 9d059a25f2ea72244be74978965d5a02, type: 3}
-  mapAlpha: 1
+  mapAlpha: .5
+  trackAlpha: 1
   mapPosition:
     serializedVersion: 2
     x: -13
     y: 0
-    width: 550
-    height: 550
+    width: 400
+    height: 400
   drawInBothEyes: 1
-  rightEyeOffset: {x: 5, y: 1050}
+  rightEyeOffset: {x: 0, y: 1050}
   firstPersonController: {fileID: 1115516425}
   pathTextures:
   - {fileID: 2800000, guid: 8640216977f188a43a994bf52018d4ce, type: 3}
