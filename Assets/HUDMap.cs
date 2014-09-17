@@ -86,8 +86,10 @@ public class HUDMap : MonoBehaviour {
 		GUI.color = newColour;
 
 		Matrix4x4 matrixBackup = GUI.matrix;
+		/*
 		GUIUtility.RotateAroundPivot(-90, new Vector2(mapPosition.x + (mapPosition.width/2.0f),
 		                                              mapPosition.y + (mapPosition.height/2.0f)));
+		                                              */
 		GUI.DrawTexture(mapPosition, mapTexture);
 
 		for (int i = 0; i < 6; i++)

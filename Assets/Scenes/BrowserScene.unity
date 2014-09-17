@@ -1589,27 +1589,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42991e87543ebf34fa870723839c557d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTexture: {fileID: 2800000, guid: 4230b8ec90f0b4fa7820ab811a73ad21, type: 3}
+  playerTexture: {fileID: 2800000, guid: aebfb9eea4afd7a42b4f7b184207c3c2, type: 3}
   playerSize: {x: 10, y: 10}
-  playerAlpha: .699999988
-  mapTexture: {fileID: 2800000, guid: 8869c305c2819f7498f3ed975eb9b4fd, type: 3}
-  mapAlpha: .699999988
+  playerAlpha: 1
+  mapTexture: {fileID: 2800000, guid: 9d059a25f2ea72244be74978965d5a02, type: 3}
+  mapAlpha: 1
   mapPosition:
     serializedVersion: 2
-    x: 10
-    y: 10
-    width: 400
-    height: 400
+    x: 0
+    y: 0
+    width: 550
+    height: 550
   drawInBothEyes: 1
   rightEyeOffset: {x: 5, y: 1050}
   firstPersonController: {fileID: 1115516425}
   pathTextures:
-  - {fileID: 2800000, guid: 051f5734b773f0642835c12aacb4ef48, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 8640216977f188a43a994bf52018d4ce, type: 3}
+  - {fileID: 2800000, guid: 31ac01b29134ca94fb56f53a3b5dbf4f, type: 3}
+  - {fileID: 2800000, guid: eb6e78aef8d92b743b881dcae5c8904d, type: 3}
+  - {fileID: 2800000, guid: 8fb47b175d3f9454bb4760889ae19339, type: 3}
+  - {fileID: 2800000, guid: 407f90cb380d93b42b19a9c28057b92b, type: 3}
+  - {fileID: 2800000, guid: c0110de1ee835e8488371d6c5b35991c, type: 3}
 --- !u!1 &614242646
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,7 +6420,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 1
+  useAVIECamera: 0
 --- !u!114 &2108953010
 MonoBehaviour:
   m_ObjectHideFlags: 0

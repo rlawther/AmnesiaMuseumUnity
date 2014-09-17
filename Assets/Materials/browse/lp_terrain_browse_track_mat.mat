@@ -105,24 +105,24 @@ Material:
       data:
         first:
           name: _Colour1
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Colour2
-        second: {r: .86206913, g: 0, b: 1, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Colour3
-        second: {r: .117241383, g: 0, b: 1, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Colour4
-        second: {r: 0, g: .917241335, b: 1, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Colour5
-        second: {r: 0, g: 1, b: .00689649582, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Colour6
-        second: {r: .944827557, g: 1, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
