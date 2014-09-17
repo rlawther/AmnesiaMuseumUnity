@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: QuadMaterial_g1e2_browse
-  m_Shader: {fileID: 4800000, guid: 9fab52b9a83be40ee9871842f3155f26, type: 3}
+  m_Shader: {fileID: 4800000, guid: c2baf9a60b92bf644af47c34819bb2fb, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -67,7 +67,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .338235319, g: .114403129, b: .114403129, a: 1}
       data:
         first:
           name: _SpecColor

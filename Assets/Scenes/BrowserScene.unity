@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560521051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42991e87543ebf34fa870723839c557d, type: 3}
   m_Name: 
@@ -6607,11 +6607,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeDistanceMultiplier: 100
-  applyBlack: 0
+  applyBlack: 1
   BlackCurve: []
   BlackCurveG1E1:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: -.00120192312
+      value: .00344827538
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG1E2:

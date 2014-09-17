@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: QuadMaterial_g1e1_browse
-  m_Shader: {fileID: 4800000, guid: 9fab52b9a83be40ee9871842f3155f26, type: 3}
+  m_Shader: {fileID: 4800000, guid: c2baf9a60b92bf644af47c34819bb2fb, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -29,14 +29,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _Illum
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -48,24 +48,24 @@ Material:
         second: .5
       data:
         first:
-          name: _BlurStrength
-        second: .5
-      data:
-        first:
-          name: _BlurWidth
-        second: 2
-      data:
-        first:
           name: _Shininess
         second: .699999988
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
       data:
         first:
           name: _EmissionLM
         second: 0
       data:
         first:
-          name: _Parallax
-        second: .0199999996
+          name: _BlurStrength
+        second: .5
+      data:
+        first:
+          name: _BlurWidth
+        second: 2
       data:
         first:
           name: _EffectAmount
@@ -114,7 +114,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: .501960814}
+        second: {r: .33088237, g: .102184258, b: .102184258, a: 1}
       data:
         first:
           name: _SpecColor

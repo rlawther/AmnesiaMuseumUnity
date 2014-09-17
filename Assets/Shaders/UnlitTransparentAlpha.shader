@@ -19,15 +19,14 @@
 		SubShader 
 		{
 
-           		Pass 
-           		{
-           			ZWrite On  // uncomment if you have problems like the sprite disappear in some rotations.
-    				SetTexture [_MainTex] 
-            			{
+	   		Pass 
+	   		{
+	   			ZWrite On  // uncomment if you have problems like the sprite disappear in some rotations.
+				SetTexture [_MainTex] 
+	    		{
 					ConstantColor [_Color]
-               				Combine Texture * constant
+	       			Combine Texture * constant
 				}
-
 			}
 		}
 	}
