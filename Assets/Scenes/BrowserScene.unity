@@ -4192,7 +4192,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53bdc70242950545b562c99a4082cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  affectedQuads: []
+  fadeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: -.00360576925
+      value: .00344827538
+      inSlope: 3.31474042
+      outSlope: 3.31474042
+      tangentMode: 10
+    - time: .298076928
+      value: 1.00344813
+      inSlope: -.887961507
+      outSlope: -.887961507
+      tangentMode: 10
+    - time: .495192319
+      value: -0
+      inSlope: -.0837931633
+      outSlope: -.0837931633
+      tangentMode: 10
+    - time: .698317289
+      value: .999999881
+      inSlope: .78603971
+      outSlope: .78603971
+      tangentMode: 10
+    - time: .995192289
+      value: .00517241331
+      inSlope: -3.35099769
+      outSlope: -3.35099769
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  animationLength: 1
 --- !u!1 &1406754380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,7 +6788,7 @@ MonoBehaviour:
     - {fileID: 1712762955}
     - {fileID: 1695448295}
     - {fileID: 2103519104}
-  usePhotos: 1
+  usePhotos: 0
   visualizations: []
   currentlySelectedVis: 0
   lineMaterial: {fileID: 2100000, guid: ed7a07c7e00e24e258ff18b53637dad7, type: 2}
