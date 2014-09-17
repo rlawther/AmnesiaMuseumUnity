@@ -47,7 +47,7 @@ public class HUDMap : MonoBehaviour {
 		mapTopRight = new Vector2(1524, 745);
 		mapSize = mapTopRight - mapBottomLeft;
 
-		paths = new GameObject[7];
+		paths = new GameObject[6];
 
 	}
 	
@@ -85,6 +85,9 @@ public class HUDMap : MonoBehaviour {
 		newColour = GUI.color;
 		newColour.a = mapAlpha;
 		GUI.color = newColour;
+
+		if (!gotParent)
+			return;
 
 		Matrix4x4 matrixBackup = GUI.matrix;
 

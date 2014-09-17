@@ -29,7 +29,7 @@ public class BillboardAndFade : MonoBehaviour {
 	private GameObject player;
 	
 	private GameObject photoParent = null;
-	
+
 	// Use this for initialization
 	void Start () {
 		this.visManager = gameObject.GetComponent<VisualizerManager> ();
@@ -66,7 +66,7 @@ public class BillboardAndFade : MonoBehaviour {
 		{
 			photoParent = GameObject.Find ("Photos");
 		}
-		
+
 		foreach (Transform narrativeScenario in photoParent.transform)
 		{
 			foreach (Transform episode in narrativeScenario)

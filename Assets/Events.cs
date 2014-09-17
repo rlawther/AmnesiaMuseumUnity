@@ -20,6 +20,7 @@ public class Events
 
 	private BillboardAndFade browserFadeScript;
 	private BillboardAndFadeAmnesiaMode amnesiaFadeScript;
+	private GameObject collisionZoneParent;
 
 	// Use this for initialization
 	void Start () {
@@ -36,6 +37,7 @@ public class Events
 
 		browserFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFade>();
 		amnesiaFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFadeAmnesiaMode>();
+		collisionZoneParent = GameObject.Find ("CollisionZones");
 	}
 	
 	void findPaths(GameObject parent)
@@ -123,6 +125,7 @@ public class Events
 				mAmnesiaMode = true;
 				amnesiaFadeScript.enabled = true;
 				browserFadeScript.enabled = false;
+				collisionZoneParent.SetActive(true);
 				/*
 				LoadLevels.artisticSceneParent.SetActive(true);
 				LoadLevels.browserSceneParent.SetActive(false);
@@ -141,7 +144,8 @@ public class Events
 				Debug.Log ("Into Browser Mode");
 				mAmnesiaMode = false;
 				browserFadeScript.enabled = true;
-				amnesiaFadeScript.enabled = true;
+				amnesiaFadeScript.enabled = false;
+				collisionZoneParent.SetActive(false);
 				/*
 				LoadLevels.artisticSceneParent.SetActive(false);
 				LoadLevels.browserSceneParent.SetActive(true);
