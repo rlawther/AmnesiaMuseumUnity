@@ -1596,7 +1596,7 @@ MonoBehaviour:
   mapAlpha: 1
   mapPosition:
     serializedVersion: 2
-    x: 0
+    x: -13
     y: 0
     width: 550
     height: 550
@@ -6420,7 +6420,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 0
+  useAVIECamera: 1
 --- !u!114 &2108953010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6504,12 +6504,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - time: -.0013487963
-      value: -.00377974473
+      value: .00142602669
       inSlope: .0286912061
       outSlope: .0286912061
       tangentMode: 0
-    - time: .100875676
-      value: 1.00266945
+    - time: .0345280617
+      value: 1.00093412
       inSlope: .0595123395
       outSlope: .0595123395
       tangentMode: 0
@@ -6518,45 +6518,45 @@ MonoBehaviour:
   fadeCurveG1E2:
     serializedVersion: 2
     m_Curve:
-    - time: .000108054839
-      value: .00541559607
-      inSlope: 0
-      outSlope: 0
+    - time: -.0013487963
+      value: .00142602669
+      inSlope: .0286912061
+      outSlope: .0286912061
       tangentMode: 0
-    - time: .350039005
-      value: .242578655
-      inSlope: 0
-      outSlope: 0
+    - time: .0345280617
+      value: 1.00093412
+      inSlope: .0595123395
+      outSlope: .0595123395
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG1E3:
     serializedVersion: 2
     m_Curve:
-    - time: -.00136184483
-      value: -.00251114368
-      inSlope: 0
-      outSlope: 0
+    - time: -.0013487963
+      value: .00142602669
+      inSlope: .0286912061
+      outSlope: .0286912061
       tangentMode: 0
-    - time: .303789169
-      value: .506012082
-      inSlope: 0
-      outSlope: 0
+    - time: .0345280617
+      value: 1.00093412
+      inSlope: .0595123395
+      outSlope: .0595123395
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E1:
     serializedVersion: 2
     m_Curve:
-    - time: .00248966622
-      value: -.000329222996
-      inSlope: .0181993004
-      outSlope: .0181993004
+    - time: -.0013487963
+      value: .00142602669
+      inSlope: .0286912061
+      outSlope: .0286912061
       tangentMode: 0
-    - time: .29990828
-      value: 1.00233459
-      inSlope: -.00238945801
-      outSlope: -.00238945801
+    - time: .0345280617
+      value: 1.00093412
+      inSlope: .0595123395
+      outSlope: .0595123395
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -6578,30 +6578,30 @@ MonoBehaviour:
   fadeCurveG2E3:
     serializedVersion: 2
     m_Curve:
-    - time: .00248966622
-      value: -.000329222996
-      inSlope: .0181993004
-      outSlope: .0181993004
+    - time: -.0013487963
+      value: .00142602669
+      inSlope: .0286912061
+      outSlope: .0286912061
       tangentMode: 0
-    - time: .29990828
-      value: 1.00233459
-      inSlope: -.00238945801
-      outSlope: -.00238945801
+    - time: .0345280617
+      value: 1.00093412
+      inSlope: .0595123395
+      outSlope: .0595123395
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E4:
     serializedVersion: 2
     m_Curve:
-    - time: .00248966622
-      value: -.000329222996
-      inSlope: .0181993004
-      outSlope: .0181993004
+    - time: -.0013487963
+      value: .00142602669
+      inSlope: .0286912061
+      outSlope: .0286912061
       tangentMode: 0
-    - time: .29990828
-      value: 1.00233459
-      inSlope: -.00238945801
-      outSlope: -.00238945801
+    - time: .0345280617
+      value: 1.00093412
+      inSlope: .0595123395
+      outSlope: .0595123395
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
