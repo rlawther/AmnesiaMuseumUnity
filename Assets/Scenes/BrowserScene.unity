@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560521051}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42991e87543ebf34fa870723839c557d, type: 3}
   m_Name: 
@@ -1593,12 +1593,12 @@ MonoBehaviour:
   playerTexture: {fileID: 2800000, guid: aebfb9eea4afd7a42b4f7b184207c3c2, type: 3}
   playerSize: {x: 20, y: 20}
   playerAlpha: 1
-  mapTexture: {fileID: 2800000, guid: 9d059a25f2ea72244be74978965d5a02, type: 3}
-  mapAlpha: .5
+  mapTexture: {fileID: 2800000, guid: 7735b481ef23e0945b70f2005d970b99, type: 3}
+  mapAlpha: 1
   trackAlpha: 1
   mapPosition:
     serializedVersion: 2
-    x: -13
+    x: 3
     y: 0
     width: 400
     height: 400
@@ -4197,49 +4197,54 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
+      inSlope: 21.7437401
+      outSlope: 21.7437401
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: .0456730723
+      value: .993103445
+      inSlope: 10.877037
+      outSlope: 10.877037
+      tangentMode: 10
+    - time: .879807711
+      value: 1.001724
+      inSlope: -4.47566223
+      outSlope: -4.47566223
+      tangentMode: 10
+    - time: .991586566
+      value: -0
+      inSlope: -8.96165943
+      outSlope: -8.96165943
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurve:
     serializedVersion: 2
     m_Curve:
-    - time: -.00360576925
-      value: .00344827538
-      inSlope: 3.31474042
-      outSlope: 3.31474042
+    - time: 0
+      value: 0
+      inSlope: 21.7437401
+      outSlope: 21.7437401
       tangentMode: 10
-    - time: .298076928
-      value: 1.00344813
-      inSlope: 1.67929912
-      outSlope: 1.67929912
+    - time: .0456730723
+      value: .993103445
+      inSlope: 10.877037
+      outSlope: 10.877037
       tangentMode: 10
-    - time: .502395213
-      value: 1.01240909
-      inSlope: -.00973980874
-      outSlope: -.00973980874
+    - time: .879807711
+      value: 1.001724
+      inSlope: -4.47566223
+      outSlope: -4.47566223
       tangentMode: 10
-    - time: .698317289
-      value: .999999881
-      inSlope: -1.70716763
-      outSlope: -1.70716763
-      tangentMode: 10
-    - time: .995192289
-      value: .00517241331
-      inSlope: -3.35099769
-      outSlope: -3.35099769
+    - time: .991586566
+      value: -0
+      inSlope: -8.96165943
+      outSlope: -8.96165943
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   animationLength: 1
-  animationIdleMin: 1
-  animationIdleMax: 5
+  animationIdleMin: 5
+  animationIdleMax: 10
 --- !u!1 &1406754380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6582,7 +6587,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108953007}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1888874ca8d561488f9af30b4cdd2a3, type: 3}
   m_Name: 
@@ -6594,90 +6599,90 @@ MonoBehaviour:
   fadeCurveG1E1:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG1E2:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E1:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E2:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E3:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG2E4:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+    - time: -.00239084475
+      value: .499655128
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
+    - time: 1.00238645
+      value: .499655187
+      inSlope: 5.93212484e-08
+      outSlope: 5.93212484e-08
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -6687,91 +6692,91 @@ MonoBehaviour:
   BlackCurveG1E1:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG1E2:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG2E1:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG2E2:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG2E3:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG2E4:
     serializedVersion: 2
     m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
+    - time: 0
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: .00289165974
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   collisionZones:
@@ -6815,7 +6820,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108953007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b590e962b708dae47bcc12987cdd6ce6, type: 3}
   m_Name: 

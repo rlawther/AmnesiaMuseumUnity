@@ -186,6 +186,12 @@ public class Events
 			{
 				togglePathActive(5);
 				eventTimeout = delayUntilNextEvent;
+			} 
+			else if (Input.GetKey ("m"))
+			{
+				HUDMap map = GameObject.Find("BaseScripts").GetComponent<HUDMap>();
+				map.enabled = !map.enabled;
+				eventTimeout = delayUntilNextEvent;
 			}
 
 		}
