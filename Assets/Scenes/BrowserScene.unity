@@ -6535,7 +6535,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108953007}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1888874ca8d561488f9af30b4cdd2a3, type: 3}
   m_Name: 
@@ -6758,7 +6758,7 @@ MonoBehaviour:
     - {fileID: 1712762955}
     - {fileID: 1695448295}
     - {fileID: 2103519104}
-  usePhotos: 0
+  usePhotos: 1
   visualizations: []
   currentlySelectedVis: 0
   lineMaterial: {fileID: 2100000, guid: ed7a07c7e00e24e258ff18b53637dad7, type: 2}
