@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BillboardAndFade_AmnesiaMode : MonoBehaviour {
+public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 
 	public bool applyBillboard;
 	public float []billboardRadius;
@@ -58,6 +58,8 @@ public class BillboardAndFade_AmnesiaMode : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int episodeNum = 0;
+		float col;
+
 		if (player == null)
 		{
 			player = GameObject.Find ("First Person Controller");
@@ -76,16 +78,21 @@ public class BillboardAndFade_AmnesiaMode : MonoBehaviour {
 				{
 					var distance = Vector3.Distance (photo.position, player.transform.position);
 					//var opacity = distance / divider - offset;
-					if (applyFade)
+					if (applyFade && applyBlack)
 					{
+						col = BlackCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier);
 						photo.gameObject.renderer.material.color = 
-							new Color (1.0f, 0.0f, 0.0f, fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier));
+							new Color (col, col, col, fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier));
 					}
-					if (applyBlack)
+					else if (applyFade)
 					{
 						photo.gameObject.renderer.material.color = 
-							new Color (fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier),fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier), fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier), 1.0f);
-
+							new Color (1.0f, 1.0f, 1.0f, fadeCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier));
+					}
+					else if (applyBlack)
+					{
+						col = BlackCurve[episodeNum].Evaluate(distance / fadeDistanceMultiplier);
+						photo.gameObject.renderer.material.color = new Color (col, col, col, 1.0f);
 					}
 					if (applyBillboard)
 					{

@@ -18,6 +18,9 @@ public class Events
 	public float delayUntilNextEvent;
 	private float eventTimeout;
 
+	private BillboardAndFade browserFadeScript;
+	private BillboardAndFadeAmnesiaMode amnesiaFadeScript;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -30,7 +33,9 @@ public class Events
 		layerTextures[5] = terrain.renderer.material.GetTexture("_Layer6");
 		
 		paths = new GameObject[7];
-		
+
+		browserFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFade>();
+		amnesiaFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFadeAmnesiaMode>();
 	}
 	
 	void findPaths(GameObject parent)
@@ -116,12 +121,16 @@ public class Events
 			{
 				Debug.Log ("Into Amnesia Mode");
 				mAmnesiaMode = true;
+				amnesiaFadeScript.enabled = true;
+				browserFadeScript.enabled = false;
+				/*
 				LoadLevels.artisticSceneParent.SetActive(true);
 				LoadLevels.browserSceneParent.SetActive(false);
 				rss = LoadLevels.artisticSceneParent.transform.Find("Scripts/BaseScripts").GetComponent<RenderSettingsSetter>();
 				rss.set();
 				GameObject photoParent = GameObject.Find ("Photos");	
 				findPaths (photoParent);
+				*/
 				
 			}
 		}
@@ -131,13 +140,16 @@ public class Events
 			{
 				Debug.Log ("Into Browser Mode");
 				mAmnesiaMode = false;
-				
+				browserFadeScript.enabled = true;
+				amnesiaFadeScript.enabled = true;
+				/*
 				LoadLevels.artisticSceneParent.SetActive(false);
 				LoadLevels.browserSceneParent.SetActive(true);
 				rss = LoadLevels.browserSceneParent.transform.Find("Scripts/BaseScripts").GetComponent<RenderSettingsSetter>();
 				rss.set();
 				GameObject photoParent = GameObject.Find ("Photos");
 				findPaths (photoParent);
+				*/
 				
 			}
 		}
