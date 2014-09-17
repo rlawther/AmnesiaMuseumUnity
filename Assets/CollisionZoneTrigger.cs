@@ -11,8 +11,11 @@ public class AffectedQuad
 
 public class CollisionZoneTrigger : MonoBehaviour {
 
+	public AnimationCurve colourCurve;
 	public AnimationCurve fadeCurve;
 	public float animationLength;
+	public float animationIdleMin;
+	public float animationIdleMax;
 	private bool isActive = false;
 
 	private List<AffectedQuad> affectedQuads;
@@ -22,7 +25,7 @@ public class CollisionZoneTrigger : MonoBehaviour {
 
 	void resetAnimation(AffectedQuad aq)
 	{
-		aq.idleTime = 0.0f;
+		aq.idleTime = Random.Range(animationIdleMin, animationIdleMax);
 		aq.animTime = 0.0f;
 	}
 
@@ -77,6 +80,7 @@ public class CollisionZoneTrigger : MonoBehaviour {
 
 	void Update()
 	{
+		float col;
 		if (!calcedAffectedQuads && (Time.time > 1.0))
 		{
 			photoParent = GameObject.Find ("Photos");
@@ -90,7 +94,10 @@ public class CollisionZoneTrigger : MonoBehaviour {
 		foreach (AffectedQuad aq in affectedQuads)
 		{
 			if (aq.idleTime <= 0)
-				aq.quad.renderer.material.color = new Color (0.0f, fadeCurve.Evaluate(aq.animTime), 0.0f, 1.0f);
+			{
+				col = colourCurve.Evaluate(aq.animTime);
+				aq.quad.renderer.material.color = new Color (col, col, col, fadeCurve.Evaluate(aq.animTime));
+			}
 			stepAnimation(aq);
 		}
 

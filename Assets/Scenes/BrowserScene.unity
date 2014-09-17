@@ -4192,6 +4192,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53bdc70242950545b562c99a4082cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colourCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
   fadeCurve:
     serializedVersion: 2
     m_Curve:
@@ -4202,18 +4217,18 @@ MonoBehaviour:
       tangentMode: 10
     - time: .298076928
       value: 1.00344813
-      inSlope: -.887961507
-      outSlope: -.887961507
+      inSlope: 1.67929912
+      outSlope: 1.67929912
       tangentMode: 10
-    - time: .495192319
-      value: -0
-      inSlope: -.0837931633
-      outSlope: -.0837931633
+    - time: .502395213
+      value: 1.01240909
+      inSlope: -.00973980874
+      outSlope: -.00973980874
       tangentMode: 10
     - time: .698317289
       value: .999999881
-      inSlope: .78603971
-      outSlope: .78603971
+      inSlope: -1.70716763
+      outSlope: -1.70716763
       tangentMode: 10
     - time: .995192289
       value: .00517241331
@@ -4223,6 +4238,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   animationLength: 1
+  animationIdleMin: 1
+  animationIdleMax: 5
 --- !u!1 &1406754380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,7 +6551,7 @@ MonoBehaviour:
   baseScripts: {fileID: 560521051}
   AVIEPrefab: {fileID: 89564223}
   mainCamera: {fileID: 6181809}
-  useAVIECamera: 0
+  useAVIECamera: 1
 --- !u!114 &2108953010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6788,7 +6805,7 @@ MonoBehaviour:
     - {fileID: 1712762955}
     - {fileID: 1695448295}
     - {fileID: 2103519104}
-  usePhotos: 0
+  usePhotos: 1
   visualizations: []
   currentlySelectedVis: 0
   lineMaterial: {fileID: 2100000, guid: ed7a07c7e00e24e258ff18b53637dad7, type: 2}
