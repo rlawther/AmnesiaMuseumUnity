@@ -1,5 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+
+public class CollisionZoneData
+{
+	public GameObject collisionZone;
+	public List<GameObject> affectedQuads;
+}
 
 public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 
@@ -10,7 +18,6 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 	public AnimationCurve []fadeCurve;
 	public AnimationCurve fadeCurveG1E1;
 	public AnimationCurve fadeCurveG1E2;
-	public AnimationCurve fadeCurveG1E3;
 	public AnimationCurve fadeCurveG2E1;
 	public AnimationCurve fadeCurveG2E2;
 	public AnimationCurve fadeCurveG2E3;
@@ -21,16 +28,46 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 	public AnimationCurve []BlackCurve;
 	public AnimationCurve BlackCurveG1E1;
 	public AnimationCurve BlackCurveG1E2;
-	public AnimationCurve BlackCurveG1E3;
 	public AnimationCurve BlackCurveG2E1;
 	public AnimationCurve BlackCurveG2E2;
 	public AnimationCurve BlackCurveG2E3;
 	public AnimationCurve BlackCurveG2E4;
 
+	public GameObject[] collisionZones;
+	private List<CollisionZoneData> collisionZoneInfo;
+
 	private VisualizerManager visManager;
 	private GameObject player;
 	
 	private GameObject photoParent = null;
+	private bool calcedZones = false;
+
+	void calcCollisionQuads()
+	{
+		Debug.Log ("Colliders");
+		collisionZoneInfo = new List<CollisionZoneData>();
+		foreach (GameObject collider in collisionZones)
+		{
+			CollisionZoneData cz = new CollisionZoneData ();
+			SphereCollider col = collider.GetComponent<SphereCollider> ();
+			Debug.Log ("Collider " + collider.name + " " + col.radius);
+			cz.collisionZone = collider;
+			cz.affectedQuads = new List<GameObject>();
+			collisionZoneInfo.Add (cz);
+			/* Add every quad that is inside the sphere to its list of affected quads */
+			foreach (Transform narrativeScenario in photoParent.transform) {
+				foreach (Transform episode in narrativeScenario) {
+					foreach (Transform photo in episode) {
+						if (Vector3.Distance(photo.position, col.transform.position) < col.radius)
+						{
+							Debug.Log ("adding affected quad");
+							cz.affectedQuads.Add(photo.gameObject);
+						}
+					}
+				}
+			}
+		}
+	}
 	
 	// Use this for initialization
 	void Start () {
@@ -59,6 +96,12 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 	void Update () {
 		int episodeNum = 0;
 		float col;
+
+		if (!calcedZones && (Time.time > 1.0))
+		{
+			calcCollisionQuads ();
+			calcedZones = true;
+		}
 
 		if (player == null)
 		{
@@ -106,6 +149,14 @@ public class BillboardAndFadeAmnesiaMode : MonoBehaviour {
 					
 				}
 				episodeNum++;
+			}
+		}
+
+		foreach (CollisionZoneData cz in collisionZoneInfo) 
+		{
+			foreach (GameObject photo in cz.affectedQuads)
+			{
+				photo.renderer.material.color = new Color (1.0f, 0.0f, 0.0f, 1.0f);
 			}
 		}
 		

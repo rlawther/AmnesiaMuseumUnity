@@ -816,6 +816,7 @@ Transform:
   - {fileID: 1148314557}
   - {fileID: 1209144775}
   - {fileID: 1157698832}
+  - {fileID: 1493593359}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &246234291
@@ -3282,7 +3283,7 @@ Transform:
   m_PrefabInternal: {fileID: 1760345333}
   m_GameObject: {fileID: 1115516425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 961.099976, y: -70, z: 82.5719147}
+  m_LocalPosition: {x: 984.971619, y: -74.460556, z: 299.971375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1055853344}
@@ -4139,6 +4140,58 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+--- !u!1 &1403895112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1403895113}
+  - 135: {fileID: 1403895114}
+  - 114: {fileID: 1403895115}
+  m_Layer: 0
+  m_Name: Tower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403895113
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403895112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.4301758, y: 11.643425, z: -64.0484924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1493593359}
+  m_RootOrder: 0
+--- !u!135 &1403895114
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403895112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 29.0799999
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1403895115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1403895112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53bdc70242950545b562c99a4082cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1406754380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4658,34 @@ Prefab:
   m_RootGameObject: {fileID: 2079896776}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1493593358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1493593359}
+  m_Layer: 0
+  m_Name: CollisionZones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493593359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493593358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1072.14062, y: -81.6920395, z: 334.063599}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1403895113}
+  m_Father: {fileID: 246234290}
+  m_RootOrder: 12
 --- !u!1 &1509762492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,15 +5287,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 961.099976
+      value: 984.971619
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -70
+      value: -74.460556
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 82.5719147
+      value: 299.971375
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6492,21 +6573,6 @@ MonoBehaviour:
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
-  fadeCurveG1E3:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
   fadeCurveG2E1:
     serializedVersion: 2
     m_Curve:
@@ -6600,21 +6666,6 @@ MonoBehaviour:
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
-  BlackCurveG1E3:
-    serializedVersion: 2
-    m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
   BlackCurveG2E1:
     serializedVersion: 2
     m_Curve:
@@ -6675,6 +6726,8 @@ MonoBehaviour:
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
+  collisionZones:
+  - {fileID: 1403895112}
 --- !u!114 &2108953014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6746,21 +6799,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   fadeCurveG1E2:
-    serializedVersion: 2
-    m_Curve:
-    - time: -.0013487963
-      value: .00142602669
-      inSlope: .0286912061
-      outSlope: .0286912061
-      tangentMode: 0
-    - time: .0345280617
-      value: 1.00093412
-      inSlope: .0595123395
-      outSlope: .0595123395
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  fadeCurveG1E3:
     serializedVersion: 2
     m_Curve:
     - time: -.0013487963
@@ -6854,21 +6892,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   BlackCurveG1E2:
-    serializedVersion: 2
-    m_Curve:
-    - time: -.00012842624
-      value: .998758852
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    - time: 1.00056386
-      value: .00336676836
-      inSlope: -.994703531
-      outSlope: -.994703531
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  BlackCurveG1E3:
     serializedVersion: 2
     m_Curve:
     - time: -.00012842624

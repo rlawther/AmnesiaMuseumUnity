@@ -10,7 +10,6 @@ public class BillboardAndFade : MonoBehaviour {
 	public AnimationCurve []fadeCurve;
 	public AnimationCurve fadeCurveG1E1;
 	public AnimationCurve fadeCurveG1E2;
-	public AnimationCurve fadeCurveG1E3;
 	public AnimationCurve fadeCurveG2E1;
 	public AnimationCurve fadeCurveG2E2;
 	public AnimationCurve fadeCurveG2E3;
@@ -21,7 +20,6 @@ public class BillboardAndFade : MonoBehaviour {
 	public AnimationCurve []BlackCurve;
 	public AnimationCurve BlackCurveG1E1;
 	public AnimationCurve BlackCurveG1E2;
-	public AnimationCurve BlackCurveG1E3;
 	public AnimationCurve BlackCurveG2E1;
 	public AnimationCurve BlackCurveG2E2;
 	public AnimationCurve BlackCurveG2E3;
