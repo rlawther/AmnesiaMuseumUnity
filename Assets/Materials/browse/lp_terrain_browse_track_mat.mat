@@ -73,7 +73,7 @@ Material:
         first:
           name: _Layer6
         second:
-          m_Texture: {fileID: 2800000, guid: d82bba411526f004a950f8d21cff0236, type: 3}
+          m_Texture: {fileID: 2800000, guid: eef1aa56a59304437adb05de8786d5b8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -105,24 +105,24 @@ Material:
       data:
         first:
           name: _Colour1
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
       data:
         first:
           name: _Colour2
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
       data:
         first:
           name: _Colour3
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
       data:
         first:
           name: _Colour4
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
       data:
         first:
           name: _Colour5
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
       data:
         first:
           name: _Colour6
-        second: {r: 1, g: 1, b: 1, a: .611764729}
+        second: {r: 1, g: 1, b: 1, a: .811764717}
