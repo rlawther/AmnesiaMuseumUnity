@@ -8,9 +8,10 @@ public class BSONTabletListener : MonoBehaviour {
 
 	BSONListener bl;
 	public FPSInputController ic;
-	public bool yAxisTurn;
 	public GameObject firstPersonController;
 	public int listenPort;
+
+	private bool joystickAtZero = false;
 
 	Events amnesiaEventHandler;
 
@@ -27,6 +28,7 @@ public class BSONTabletListener : MonoBehaviour {
 		BSONObject bo;
 		Vector3 newPosition = new Vector3(0, 0, 0);
 		bool moveToNewPosition = false;
+		float f;
 		//ic.directionVector.x = 1.0f;
 		//Debug.Log ("set dir");
 
@@ -37,22 +39,22 @@ public class BSONTabletListener : MonoBehaviour {
 
 			foreach (string k in bo.Keys)
 			{
-
 				Debug.Log (k + "," + bo[k] + ",\n");
 			}
 
-
-
 			if (bo.ContainsKey("y"))
 			{
-				ic.networkDirectionVector.z = bo["y"];
+				ic.networkDirectionVector.z = (float)bo["y"].doubleValue;
 			}
 			if (bo.ContainsKey("x"))
 			{
-				if (yAxisTurn)
-					firstPersonController.transform.Rotate(0, bo["x"] * 1.0f, 0);
+				f = (float)bo["x"].doubleValue;
+				Debug.Log ("set rot" + f);
+				amnesiaEventHandler.setCameraRotateAmount(f);
+				if (f == 0.0f)
+					joystickAtZero = true;
 				else
-					ic.networkDirectionVector.x = bo["x"];
+					joystickAtZero = false;
 			}
 			if (bo.ContainsKey("movex"))
 			{
@@ -111,6 +113,7 @@ public class BSONTabletListener : MonoBehaviour {
 
 			bo = bl.Receive();
 		}
-
+		if (joystickAtZero)
+			amnesiaEventHandler.setCameraRotateAmount(0.0f);
 	}
 }

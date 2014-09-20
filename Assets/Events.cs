@@ -26,6 +26,8 @@ public class Events
 	private Vector3 cameraOriginalPos;
 	private Quaternion cameraOriginalRotation;
 
+	private float rotateAmount;
+	public float rotationChange;
 	// Use this for initialization
 	void Start () {
 	
@@ -45,6 +47,8 @@ public class Events
 
 		cameraOriginalPos = firstPersonController.transform.position;
 		cameraOriginalRotation = firstPersonController.transform.rotation;
+
+		rotateAmount = 0.0f;
 	}
 	
 	void findPaths(GameObject parent)
@@ -112,6 +116,23 @@ public class Events
 		amnesiaFadeScript.enabled = false;
 		collisionZoneParent.SetActive (false);
 	}
+
+	public void rotateCamera(float rot)
+	{
+		firstPersonController.transform.Rotate(0, rot, 0);
+	}
+
+	public void setCameraRotateAmount(float rot)
+	{
+		Debug.Log ("rot amt " + rot);
+		if (Mathf.Abs (rotateAmount - rot) < rotationChange)
+			rotateAmount = rot;
+		else if (rot < rotateAmount)
+			rotateAmount -= rotationChange;
+		else
+			rotateAmount += rotationChange;
+		
+	}
 	
 	/* sets the child at the given index to active, all other children
 	 * to inactive.
@@ -153,6 +174,8 @@ public class Events
 	
 		RenderSettingsSetter rss;
 
+		rotateCamera(rotateAmount);
+
 		if (!gotParent && (Time.time > 1.0)) {
 				GameObject photoParent = GameObject.Find ("Photos");
 				findPaths (photoParent);
@@ -170,6 +193,14 @@ public class Events
 			}
 		}
 
+		if (Input.GetKey ("z"))
+			setCameraRotateAmount(-1.0f);
+		else if (Input.GetKey ("c"))
+			setCameraRotateAmount(1.0f);
+		else if (Input.GetKey ("x"))
+			setCameraRotateAmount(0.0f);
+		
+		
 		if (Input.GetKeyDown ("1")) {
 				togglePathActive (0);
 		} else if (Input.GetKeyDown ("2")) {

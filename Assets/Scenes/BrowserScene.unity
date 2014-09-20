@@ -7906,6 +7906,7 @@ MonoBehaviour:
   terrain: {fileID: 1345082643}
   firstPersonController: {fileID: 1115516425}
   delayUntilNextEvent: .5
+  rotationChange: .0500000007
 --- !u!114 &2108953012
 MonoBehaviour:
   m_ObjectHideFlags: 0
