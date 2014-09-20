@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Toolbelt;
 using Kernys.Bson;
 
-public class BSONTestServer : MonoBehaviour {
+public class BSONTabletListener : MonoBehaviour {
 
 	BSONListener bl;
 	public FPSInputController ic;
@@ -12,10 +12,13 @@ public class BSONTestServer : MonoBehaviour {
 	public GameObject firstPersonController;
 	public int listenPort;
 
+	Events amnesiaEventHandler;
+
 	// Use this for initialization
 	void Start () {
 	
 		bl = new BSONListener(listenPort);
+		amnesiaEventHandler = GameObject.Find ("Scripts").GetComponent<Events> ();
 	}
 	
 	// Update is called once per frame
@@ -31,13 +34,13 @@ public class BSONTestServer : MonoBehaviour {
 
 		while (bo != null)
 		{
-			/*
+
 			foreach (string k in bo.Keys)
 			{
 
 				Debug.Log (k + "," + bo[k] + ",\n");
 			}
-			*/
+
 
 
 			if (bo.ContainsKey("y"))
@@ -74,10 +77,36 @@ public class BSONTestServer : MonoBehaviour {
 
 			if (bo.ContainsKey("button"))
 			{
-				if (string.Equals (bo["button"], "artistic"))
-					Debug.Log ("ARTISTIC\n");
-				else
-					Debug.Log ("not ARTISTIC\n");
+				if (string.Equals (bo["button"], "amnesiaMode"))
+					amnesiaEventHandler.useAmnesiaMode();
+				else if (string.Equals (bo["button"], "browserMode"))
+					amnesiaEventHandler.useBrowserMode();
+				else if (string.Equals (bo["button"], "reset"))
+					amnesiaEventHandler.resetCamera();
+			}
+			if (bo.ContainsKey("path1"))
+			{
+				amnesiaEventHandler.setPathActive(0, ((int)bo["path1"]) != 0);
+			}
+			if (bo.ContainsKey("path2"))
+			{
+				amnesiaEventHandler.setPathActive(1, ((int)bo["path2"]) != 0);
+			}
+			if (bo.ContainsKey("path3"))
+			{
+				amnesiaEventHandler.setPathActive(2, ((int)bo["path3"]) != 0);
+			}
+			if (bo.ContainsKey("path4"))
+			{
+				amnesiaEventHandler.setPathActive(3, ((int)bo["path4"]) != 0);
+			}
+			if (bo.ContainsKey("path5"))
+			{
+				amnesiaEventHandler.setPathActive(4, ((int)bo["path5"]) != 0);
+			}
+			if (bo.ContainsKey("path6"))
+			{
+				amnesiaEventHandler.setPathActive(5, ((int)bo["path6"]) != 0);
 			}
 
 			bo = bl.Receive();

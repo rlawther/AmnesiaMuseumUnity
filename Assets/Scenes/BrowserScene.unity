@@ -7904,6 +7904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 1345082643}
+  firstPersonController: {fileID: 1115516425}
   delayUntilNextEvent: .5
 --- !u!114 &2108953012
 MonoBehaviour:

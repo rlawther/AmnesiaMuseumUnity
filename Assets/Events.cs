@@ -5,6 +5,7 @@ public class Events
  : MonoBehaviour {
  
  	public GameObject terrain;
+	public GameObject firstPersonController;
  	private bool mAmnesiaMode = true;
  	private GameObject mActiveNarrativeScenario = null;
  	
@@ -22,6 +23,9 @@ public class Events
 	private BillboardAndFadeAmnesiaMode amnesiaFadeScript;
 	private GameObject collisionZoneParent;
 
+	private Vector3 cameraOriginalPos;
+	private Quaternion cameraOriginalRotation;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -38,6 +42,9 @@ public class Events
 		browserFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFade>();
 		amnesiaFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFadeAmnesiaMode>();
 		collisionZoneParent = GameObject.Find ("CollisionZones");
+
+		cameraOriginalPos = firstPersonController.transform.position;
+		cameraOriginalRotation = firstPersonController.transform.rotation;
 	}
 	
 	void findPaths(GameObject parent)
@@ -53,8 +60,8 @@ public class Events
 		}
 		
 	}
-	
-	void togglePathActive(int index)
+
+	public void togglePathActive(int index)
 	{
 		Debug.Log ("toggling path " + index);
 		if (paths[index].activeSelf)
@@ -67,7 +74,7 @@ public class Events
 		}
 	}
 
-	void setPathActive(int index, bool active)
+	public void setPathActive(int index, bool active)
 	{
 		Debug.Log ("setting path " + index + ", active=" + active);
 		if (!active)
@@ -82,6 +89,30 @@ public class Events
 		}
 	}
 
+	public void resetCamera()
+	{
+		firstPersonController.transform.position = cameraOriginalPos;
+		firstPersonController.transform.rotation = cameraOriginalRotation;
+	}
+
+	public void useAmnesiaMode()
+	{
+		Debug.Log ("Into Amnesia Mode");
+		mAmnesiaMode = true;
+		amnesiaFadeScript.enabled = true;
+		browserFadeScript.enabled = false;
+		collisionZoneParent.SetActive (true);
+	}
+	
+	public void useBrowserMode()
+	{
+		Debug.Log ("Into Browser Mode");
+		mAmnesiaMode = false;
+		browserFadeScript.enabled = true;
+		amnesiaFadeScript.enabled = false;
+		collisionZoneParent.SetActive (false);
+	}
+	
 	/* sets the child at the given index to active, all other children
 	 * to inactive.
 	 * Returns the now active child
@@ -121,86 +152,41 @@ public class Events
 	void Update () {
 	
 		RenderSettingsSetter rss;
-		
-		if (!gotParent && (Time.time > 1.0))
-		{
-			GameObject photoParent = GameObject.Find ("Photos");
-			findPaths (photoParent);
-			
-			gotParent = true;
-		}
-	
-		if (Input.GetKey("o"))
-		{
-			if (!mAmnesiaMode)
-			{
-				Debug.Log ("Into Amnesia Mode");
-				mAmnesiaMode = true;
-				amnesiaFadeScript.enabled = true;
-				browserFadeScript.enabled = false;
-				collisionZoneParent.SetActive(true);
-				/*
-				LoadLevels.artisticSceneParent.SetActive(true);
-				LoadLevels.browserSceneParent.SetActive(false);
-				rss = LoadLevels.artisticSceneParent.transform.Find("Scripts/BaseScripts").GetComponent<RenderSettingsSetter>();
-				rss.set();
-				GameObject photoParent = GameObject.Find ("Photos");	
-				findPaths (photoParent);
-				*/
-				
-			}
-		}
-		else if (Input.GetKey("p"))
-		{
-			if (mAmnesiaMode)
-			{
-				Debug.Log ("Into Browser Mode");
-				mAmnesiaMode = false;
-				browserFadeScript.enabled = true;
-				amnesiaFadeScript.enabled = false;
-				collisionZoneParent.SetActive(false);
-				/*
-				LoadLevels.artisticSceneParent.SetActive(false);
-				LoadLevels.browserSceneParent.SetActive(true);
-				rss = LoadLevels.browserSceneParent.transform.Find("Scripts/BaseScripts").GetComponent<RenderSettingsSetter>();
-				rss.set();
+
+		if (!gotParent && (Time.time > 1.0)) {
 				GameObject photoParent = GameObject.Find ("Photos");
 				findPaths (photoParent);
-				*/
-				
+	
+				gotParent = true;
+		}
+
+		if (Input.GetKey ("o")) {
+			if (!mAmnesiaMode) {
+				useAmnesiaMode();
+			}
+		} else if (Input.GetKey ("p")) {
+			if (mAmnesiaMode) {
+				useBrowserMode();
 			}
 		}
 
-		if (Input.GetKeyDown("1"))
-		{
-			togglePathActive(0);
+		if (Input.GetKeyDown ("1")) {
+				togglePathActive (0);
+		} else if (Input.GetKeyDown ("2")) {
+				togglePathActive (1);
+		} else if (Input.GetKeyDown ("3")) {
+				togglePathActive (2);
+		} else if (Input.GetKeyDown ("4")) {
+				togglePathActive (3);
+		} else if (Input.GetKeyDown ("5")) {
+				togglePathActive (4);
+		} else if (Input.GetKeyDown ("6")) {
+				togglePathActive (5);
+		} else if (Input.GetKeyDown ("m")) {
+				HUDMap map = GameObject.Find ("BaseScripts").GetComponent<HUDMap> ();
+				map.enabled = !map.enabled;
+		} else if (Input.GetKeyDown ("r")) {
+				resetCamera ();
 		}
-		else if (Input.GetKeyDown("2"))
-		{
-			togglePathActive(1);
-		}
-		else if (Input.GetKeyDown("3"))
-		{
-			togglePathActive(2);
-		}
-		else if (Input.GetKeyDown("4"))
-		{
-			togglePathActive(3);
-		}
-		else if (Input.GetKeyDown("5"))
-		{
-			togglePathActive(4);
-		}
-		else if (Input.GetKeyDown("6"))
-		{
-			togglePathActive(5);
-		} 
-		else if (Input.GetKeyDown("m"))
-		{
-			HUDMap map = GameObject.Find("BaseScripts").GetComponent<HUDMap>();
-			map.enabled = !map.enabled;
-		}
-
-
 	}
 }
