@@ -59,6 +59,19 @@ public class Events
 		Debug.Log ("toggling path " + index);
 		if (paths[index].activeSelf)
 		{
+			setPathActive(index, false);
+		}
+		else
+		{
+			setPathActive(index, true);
+		}
+	}
+
+	void setPathActive(int index, bool active)
+	{
+		Debug.Log ("setting path " + index + ", active=" + active);
+		if (!active)
+		{
 			paths[index].SetActive(false);
 			terrain.renderer.material.SetTexture("_Layer" + (index + 1), null);
 		}
@@ -68,7 +81,7 @@ public class Events
 			terrain.renderer.material.SetTexture("_Layer" + (index + 1), layerTextures[index]);
 		}
 	}
-	
+
 	/* sets the child at the given index to active, all other children
 	 * to inactive.
 	 * Returns the now active child
@@ -158,53 +171,36 @@ public class Events
 			}
 		}
 
-		if (eventTimeout <= 0)
+		if (Input.GetKeyDown("1"))
 		{
-			if (Input.GetKey("1"))
-			{
-				togglePathActive(0);
-				eventTimeout = delayUntilNextEvent;
-			}
-			else if (Input.GetKey("2"))
-			{
-				togglePathActive(1);
-				eventTimeout = delayUntilNextEvent;
-				Debug.Log ("active path 1");
-			}
-			else if (Input.GetKey("3"))
-			{
-				togglePathActive(2);
-				eventTimeout = delayUntilNextEvent;
-			}
-			else if (Input.GetKey("4"))
-			{
-				togglePathActive(3);
-				eventTimeout = delayUntilNextEvent;
-			}
-			else if (Input.GetKey("5"))
-			{
-				togglePathActive(4);
-				eventTimeout = delayUntilNextEvent;
-			}
-			else if (Input.GetKey("6"))
-			{
-				togglePathActive(5);
-				eventTimeout = delayUntilNextEvent;
-			} 
-			else if (Input.GetKey ("m"))
-			{
-				HUDMap map = GameObject.Find("BaseScripts").GetComponent<HUDMap>();
-				map.enabled = !map.enabled;
-				eventTimeout = delayUntilNextEvent;
-			}
+			togglePathActive(0);
+		}
+		else if (Input.GetKeyDown("2"))
+		{
+			togglePathActive(1);
+		}
+		else if (Input.GetKeyDown("3"))
+		{
+			togglePathActive(2);
+		}
+		else if (Input.GetKeyDown("4"))
+		{
+			togglePathActive(3);
+		}
+		else if (Input.GetKeyDown("5"))
+		{
+			togglePathActive(4);
+		}
+		else if (Input.GetKeyDown("6"))
+		{
+			togglePathActive(5);
+		} 
+		else if (Input.GetKeyDown("m"))
+		{
+			HUDMap map = GameObject.Find("BaseScripts").GetComponent<HUDMap>();
+			map.enabled = !map.enabled;
+		}
 
-		}
-		else
-		{
-			if (eventTimeout >= 0)
-				eventTimeout -= Time.deltaTime;
-		}
-			
-		
+
 	}
 }
