@@ -15,6 +15,7 @@ public class PositionSender : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		Debug.Log ("Starting position Sender");
 		bsonSender = new BSONSender(remoteHost, remotePort);
 		framesTillSend = sendEveryXFrames;
 	}

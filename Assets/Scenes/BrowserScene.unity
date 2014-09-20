@@ -1649,7 +1649,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ic: {fileID: 1115516426}
-  yAxisTurn: 1
   firstPersonController: {fileID: 1115516425}
   listenPort: 5550
 --- !u!114 &560521055
@@ -1680,7 +1679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   remoteHost: 10.0.16.100
-  remotePort: 6550
+  remotePort: 5560
   sendEveryXFrames: 1
   playerPosition: {fileID: 1115516425}
 --- !u!114 &560521057

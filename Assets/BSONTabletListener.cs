@@ -13,13 +13,17 @@ public class BSONTabletListener : MonoBehaviour {
 
 	private bool joystickAtZero = false;
 
-	Events amnesiaEventHandler;
+	private Events amnesiaEventHandler;
+	private PositionSender posSender;
+
+
 
 	// Use this for initialization
 	void Start () {
 	
 		bl = new BSONListener(listenPort);
 		amnesiaEventHandler = GameObject.Find ("Scripts").GetComponent<Events> ();
+		posSender = GetComponent<PositionSender>();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +45,9 @@ public class BSONTabletListener : MonoBehaviour {
 			{
 				Debug.Log (k + "," + bo[k] + ",\n");
 			}
+
+			if (bo.ContainsKey("positionListener"))
+				posSender.enabled = true;
 
 			if (bo.ContainsKey("y"))
 			{
