@@ -25,7 +25,8 @@ public class BSONTabletListener : MonoBehaviour {
 	void OnApplicationQuit()
 	{
 		Debug.Log ("Stopping BSON Listener");
-		bl.stop ();
+		if (bl != null)
+			bl.stop ();
 	}
 
 	// Use this for initialization

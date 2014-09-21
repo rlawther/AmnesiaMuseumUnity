@@ -186,6 +186,10 @@ public class Events
 		{
 			Debug.Log ("Quitting");
 			Application.Quit ();
+			#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+			#endif
+			
 		}
 			
 		if (Input.GetKey ("o")) {
