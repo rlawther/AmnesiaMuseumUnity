@@ -44,6 +44,7 @@ public class Events
 		browserFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFade>();
 		amnesiaFadeScript = GameObject.Find ("Scripts").GetComponent<BillboardAndFadeAmnesiaMode>();
 		collisionZoneParent = GameObject.Find ("CollisionZones");
+		collisionZoneParent.SetActive(false);
 
 		cameraOriginalPos = firstPersonController.transform.position;
 		cameraOriginalRotation = firstPersonController.transform.rotation;
