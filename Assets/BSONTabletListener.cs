@@ -16,6 +16,9 @@ public class BSONTabletListener : MonoBehaviour {
 	private Events amnesiaEventHandler;
 	private PositionSender posSender;
 
+	public float moveSpeed;
+	public float rotateSpeed;
+
 
 
 	// Use this for initialization
@@ -51,13 +54,13 @@ public class BSONTabletListener : MonoBehaviour {
 
 			if (bo.ContainsKey("y"))
 			{
-				ic.networkDirectionVector.z = (float)bo["y"].doubleValue;
+				ic.networkDirectionVector.z = ((float)bo["y"].doubleValue) * moveSpeed;
 			}
 			if (bo.ContainsKey("x"))
 			{
 				f = (float)bo["x"].doubleValue;
 				Debug.Log ("set rot" + f);
-				amnesiaEventHandler.setCameraRotateAmount(f);
+				amnesiaEventHandler.setCameraRotateAmount(f * rotateSpeed);
 				if (f == 0.0f)
 					joystickAtZero = true;
 				else
