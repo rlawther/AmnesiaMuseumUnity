@@ -30,6 +30,11 @@ public class BSONListener {
 		mTcpListener.StopThread();
 	}
 	
+	public void stop()
+	{
+		mTcpListener.StopThread();
+	}
+	
 	/*
  	 * Grabs a byte[] from the listener and turns it into a BSONObject
      *

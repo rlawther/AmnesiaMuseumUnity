@@ -8073,7 +8073,7 @@ MonoBehaviour:
     - {fileID: 1712762955}
     - {fileID: 1695448295}
     - {fileID: 2103519104}
-  usePhotos: 1
+  usePhotos: 0
   visualizations: []
   currentlySelectedVis: 0
   lineMaterial: {fileID: 2100000, guid: ed7a07c7e00e24e258ff18b53637dad7, type: 2}

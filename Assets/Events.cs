@@ -124,7 +124,6 @@ public class Events
 
 	public void setCameraRotateAmount(float rot)
 	{
-		Debug.Log ("rot amt " + rot);
 		if (Mathf.Abs (rotateAmount - rot) < rotationChange)
 			rotateAmount = rot;
 		else if (rot < rotateAmount)
@@ -183,6 +182,12 @@ public class Events
 				gotParent = true;
 		}
 
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Debug.Log ("Quitting");
+			Application.Quit ();
+		}
+			
 		if (Input.GetKey ("o")) {
 			if (!mAmnesiaMode) {
 				useAmnesiaMode();

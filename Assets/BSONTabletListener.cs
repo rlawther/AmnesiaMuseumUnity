@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Toolbelt;
 using Kernys.Bson;
+using System.Net.Sockets;
 
 public class BSONTabletListener : MonoBehaviour {
 
@@ -18,15 +19,29 @@ public class BSONTabletListener : MonoBehaviour {
 
 	public float moveSpeed;
 	public float rotateSpeed;
+	
+	private bool init = false;
 
-
+	void OnApplicationQuit()
+	{
+		Debug.Log ("Stopping BSON Listener");
+		bl.stop ();
+	}
 
 	// Use this for initialization
 	void Start () {
-	
-		bl = new BSONListener(listenPort);
+		try
+		{	
+			bl = new BSONListener(listenPort);
+		}
+		catch (SocketException se)
+		{
+			Debug.Log ("Socket exception - throw error");
+			return;
+		}
 		amnesiaEventHandler = GameObject.Find ("Scripts").GetComponent<Events> ();
 		posSender = GetComponent<PositionSender>();
+		init = true;
 	}
 	
 	// Update is called once per frame
@@ -39,6 +54,9 @@ public class BSONTabletListener : MonoBehaviour {
 		//ic.directionVector.x = 1.0f;
 		//Debug.Log ("set dir");
 
+		if (!init)
+			return;
+			
 		bo = bl.Receive();
 
 		while (bo != null)
@@ -46,6 +64,8 @@ public class BSONTabletListener : MonoBehaviour {
 
 			foreach (string k in bo.Keys)
 			{
+				if (string.Equals(k, "x") || string.Equals(k, "y"))
+					continue;
 				Debug.Log (k + "," + bo[k] + ",\n");
 			}
 
@@ -59,7 +79,6 @@ public class BSONTabletListener : MonoBehaviour {
 			if (bo.ContainsKey("x"))
 			{
 				f = (float)bo["x"].doubleValue;
-				Debug.Log ("set rot" + f);
 				amnesiaEventHandler.setCameraRotateAmount(f * rotateSpeed);
 				if (f == 0.0f)
 					joystickAtZero = true;
@@ -70,7 +89,7 @@ public class BSONTabletListener : MonoBehaviour {
 			{
 				moveToNewPosition = true;
 				newPosition.x = bo["movex"];
-				Debug.Log ("movex : " + bo["movex"]);
+				//Debug.Log ("movex : " + bo["movex"]);
 			}
 			if (bo.ContainsKey("movey"))
 			{
@@ -125,5 +144,16 @@ public class BSONTabletListener : MonoBehaviour {
 		}
 		if (joystickAtZero)
 			amnesiaEventHandler.setCameraRotateAmount(0.0f);
+	}
+	
+	public void OnGUI()
+	{
+		if (!init)
+		{
+			GUI.Box (new Rect (Screen.width - 250,Screen.height - 50,250,50), "Messages");
+			GUI.Label (new Rect (Screen.width - 230,Screen.height - 30,230,20), 
+			  "Socket Error - reboot required");
+		}
+		
 	}
 }
